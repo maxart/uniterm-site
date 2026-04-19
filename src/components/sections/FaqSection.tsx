@@ -7,12 +7,20 @@ interface Qa {
 
 const QAS: Qa[] = [
   {
+    q: 'How much does Uniterm cost?',
+    a: 'Nothing. Uniterm is free to download and use, with no paid tier, no usage limits, and no trial timer. The binary you download is the whole product.',
+  },
+  {
+    q: 'Do I need to sign up or give you an email?',
+    a: 'No. There is no account, no email collection, and no license key. Download the binary and launch it. Uniterm makes no network calls back to us, runs no telemetry, and has no analytics. Your shell sessions, project paths, and config stay on your machine.',
+  },
+  {
     q: 'Does Uniterm replace tmux?',
-    a: 'No. Uniterm is a GUI terminal multiplexer with split panes, tabs, and a project sidebar. If you live inside tmux over SSH, keep tmux — Uniterm is for the local window you open first.',
+    a: 'No. Uniterm is a GUI terminal multiplexer with split panes, tabs, and a project sidebar. If you live inside tmux over SSH, keep tmux. Uniterm is for the local window you open first.',
   },
   {
     q: 'How is it different from Warp or iTerm2?',
-    a: 'Uniterm is project-centric — tabs and splits are grouped per folder and restored on launch. It runs on macOS, Windows, and Linux from the same codebase, and there is no account, no cloud sync, and no AI subscription gated behind the binary.',
+    a: 'Uniterm is project-centric. Tabs and splits are grouped per folder and restored on launch. It runs on macOS, Windows, and Linux from the same codebase, and there is no account, no cloud sync, and no AI subscription gated behind the binary.',
   },
   {
     q: 'Can I bring my own theme?',

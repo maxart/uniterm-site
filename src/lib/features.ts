@@ -40,7 +40,7 @@ export const FEATURES: Feature[] = [
     icon: Palette,
     title: '21 bundled themes',
     description:
-      'Catppuccin, Tokyo Night, Gruvbox, Nord, Rose Pine, Kanagawa, and more — with full Ghostty theme compatibility.',
+      'Catppuccin, Tokyo Night, Gruvbox, Nord, Rose Pine, Kanagawa, and more. Full Ghostty theme compatibility.',
   },
   {
     icon: TerminalSquare,

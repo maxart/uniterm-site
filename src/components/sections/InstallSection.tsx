@@ -1,5 +1,4 @@
 import { useId, useRef, useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
 
 import { CopyCommand } from '../CopyCommand';
 
@@ -129,15 +128,6 @@ export function InstallSection() {
               </span>
             </div>
 
-            <a
-              href="https://github.com/maxart/uniterm#build-from-source"
-              target="_blank"
-              rel="noreferrer"
-              className="mt-10 inline-flex items-center gap-1.5 text-sm text-[var(--color-accent)] hover:underline"
-            >
-              Build from source on GitHub
-              <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
-            </a>
           </div>
         </div>
       </div>

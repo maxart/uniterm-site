@@ -18,12 +18,18 @@ export function NavBar() {
       >
         <a
           href="#top"
-          className="flex items-center gap-2 text-sm font-medium text-[var(--color-fg)]"
+          className="flex items-center gap-2 text-sm font-semibold text-[var(--color-fg)]"
         >
-          <img src={appIconSrc} alt="" width={24} height={24} className="h-6 w-6" />
+          <img
+            src={appIconSrc}
+            alt=""
+            width={24}
+            height={24}
+            className="h-6 w-6 [filter:drop-shadow(0_0_4px_rgba(255,255,255,0.2))]"
+          />
           Uniterm
         </a>
-        <ul className="hidden items-center gap-6 text-sm text-[var(--color-fg-muted)] sm:flex">
+        <ul className="hidden items-center gap-6 font-mono text-sm text-[var(--color-fg-muted)] sm:flex">
           {LINKS.map(({ href, label }) => (
             <li key={href}>
               <a

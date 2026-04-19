@@ -84,8 +84,27 @@ export function Footer() {
       </div>
       <div className="border-t border-[var(--color-border)]">
         <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-2 px-6 py-5 font-mono text-xs text-[var(--color-fg-dim)] sm:flex-row">
-          <p>© Uniterm · MIT</p>
-          <p>Built with Tauri + React</p>
+          <p>© Uniterm · O'App License</p>
+          <p>
+            Built with{' '}
+            <a
+              href="https://tauri.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors hover:text-[var(--color-fg)]"
+            >
+              Tauri
+            </a>{' '}
+            +{' '}
+            <a
+              href="https://react.dev/"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors hover:text-[var(--color-fg)]"
+            >
+              React
+            </a>
+          </p>
         </div>
       </div>
     </footer>

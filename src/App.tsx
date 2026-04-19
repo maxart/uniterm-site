@@ -2,6 +2,7 @@ import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { NavBar } from './components/NavBar';
 import { AgenticSection } from './components/sections/AgenticSection';
+import { AgentsStrip } from './components/sections/AgentsStrip';
 import { FaqSection } from './components/sections/FaqSection';
 import { FeaturesGrid } from './components/sections/FeaturesGrid';
 import { InstallSection } from './components/sections/InstallSection';
@@ -17,6 +18,7 @@ export function App() {
       <NavBar />
       <Hero />
       <main>
+        <AgentsStrip />
         <ShowcaseSection />
         <StatsStrip />
         <FeaturesGrid />

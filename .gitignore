@@ -30,3 +30,6 @@ dist-ssr
 /full-*.png
 /verify-*.png
 /verify2-*.png
+
+# WSL/NTFS metadata
+*:Zone.Identifier

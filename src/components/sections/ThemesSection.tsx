@@ -18,12 +18,14 @@ export function ThemesSection() {
             21 themes. Or bring your own.
           </h2>
           <p className="text-base text-[var(--color-fg-muted)]">
-            Uniterm reads Ghostty's theme format. Drop a file into
+            Ships with ports of the Omarchy and Ghostty theme libraries, plus
+            full compatibility with Ghostty's
+            <span className="font-mono text-[var(--color-fg)]"> .conf </span>
+            format. Drop a file into
             <span className="font-mono text-[var(--color-fg)]">
               {' '}~/.config/ghostty/themes/{' '}
             </span>
-            and it just appears in the theme picker. All UI colors follow the
-            active palette.
+            and it appears in the theme picker immediately.
           </p>
         </div>
 
@@ -35,18 +37,37 @@ export function ThemesSection() {
           ))}
         </ul>
 
-        <p className="mt-10 text-sm text-[var(--color-fg-muted)]">
-          Showing 12 of 21 bundled themes.
-          <a
-            href="https://github.com/ghostty-org/ghostty/tree/main/src/config/themes"
-            target="_blank"
-            rel="noreferrer"
-            className="ml-2 inline-flex items-center gap-1 text-[var(--color-accent)] hover:underline"
-          >
-            Browse the Ghostty theme gallery
-            <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
-          </a>
-        </p>
+        <div className="mt-12 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-[var(--color-fg-muted)]">
+            Showing 12 of 21 bundled themes.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://learn.omacom.io/2/the-omarchy-manual/52/themes"
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-[var(--color-fg)] transition-colors hover:border-white/30 hover:bg-white/5"
+            >
+              Omarchy theme gallery
+              <ArrowUpRight
+                className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                aria-hidden
+              />
+            </a>
+            <a
+              href="https://terminalcolors.com/ghostty/"
+              target="_blank"
+              rel="noreferrer"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-[var(--color-fg)] transition-colors hover:border-white/30 hover:bg-white/5"
+            >
+              Ghostty theme gallery
+              <ArrowUpRight
+                className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                aria-hidden
+              />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -16,7 +16,7 @@ export function FeaturesGrid() {
           </h2>
           <p className="text-base text-[var(--color-fg-muted)]">
             A focused terminal multiplexer that stays out of your flow. No
-            configuration required to get started — deep customization when you
+            configuration required to get started. Deep customization when you
             want it.
           </p>
         </div>

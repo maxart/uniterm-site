@@ -16,8 +16,8 @@ export function ShowcaseSection() {
           </h2>
           <p className="text-base text-[var(--color-fg-muted)]">
             Project-scoped tabs on the left, infinitely-splittable panes on the
-            right. Drop in an AI agent, your dev server, and a scratch shell —
-            all persistent across restarts.
+            right. Drop in an AI agent, your dev server, and a scratch shell.
+            All persistent across restarts.
           </p>
         </div>
 

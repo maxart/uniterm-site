@@ -1,5 +1,5 @@
 const ITEMS = [
-  'MIT Licensed',
+  "O'App Licensed",
   'Tauri v2 + Rust',
   'xterm.js + WebGL',
   'macOS · Windows · Linux',

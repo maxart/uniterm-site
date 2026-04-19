@@ -5,7 +5,7 @@ const POINTS = [
     icon: Layers,
     title: 'Run agents alongside your editor',
     description:
-      'Split a pane for Claude Code, one for your dev server, one for git. Everything visible at once — no context switching.',
+      'Split a pane for Claude Code, one for your dev server, one for git. Everything visible at once, no context switching.',
   },
   {
     icon: GitBranch,
@@ -42,8 +42,8 @@ export function AgenticSection() {
             Your agents deserve a real workspace.
           </h2>
           <p className="mb-10 text-base leading-relaxed text-[var(--color-fg-muted)]">
-            Uniterm was designed for developers running Claude Code, Codex,
-            Aider, and their own in-terminal agents. Split panes, persistent
+            Uniterm was designed for developers running Claude Code, OpenCode,
+            Codex, and their own in-terminal agents. Split panes, persistent
             workspaces, and a project-scoped sidebar make parallel agent
             sessions feel native.
           </p>
@@ -83,7 +83,7 @@ function TerminalMock() {
           <span className="h-2.5 w-2.5 rounded-full bg-[#28c840]" aria-hidden />
         </div>
         <span className="text-[11px] text-[var(--color-fg-dim)]">
-          uniterm — my-project
+          uniterm · my-project
         </span>
         <span className="w-10" aria-hidden />
       </div>

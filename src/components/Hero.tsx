@@ -54,9 +54,8 @@ export function Hero() {
             </span>
           </h1>
           <p className="max-w-2xl text-[clamp(1rem,1.8vw,1.25rem)] leading-relaxed text-[var(--color-fg-muted)]">
-            A cross-platform terminal multiplexer with a project-scoped sidebar,
-            unlimited splits, and persistent workspaces — built for developers
-            running Claude Code, Codex, and Aider side-by-side.
+            The terminal multiplexer for AI coding. Agents and AI workflows in
+            project-scoped workspaces.
           </p>
         </div>
 

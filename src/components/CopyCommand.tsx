@@ -27,7 +27,7 @@ export function CopyCommand({ command, className }: Props) {
       timerRef.current = setTimeout(() => setCopied(false), 1500);
     } catch {
       // Clipboard may be unavailable (insecure origin, permissions);
-      // fail silently — users can select the text manually.
+      // users can select the text manually.
     }
   }
 

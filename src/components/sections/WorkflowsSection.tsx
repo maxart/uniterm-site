@@ -62,7 +62,7 @@ export function WorkflowsSection() {
           </h2>
           <p className="text-base leading-relaxed text-[var(--color-fg-muted)]">
             Open projects, switch themes, jump between panes, and fire custom
-            workflows — all from one palette. Fuzzy-matched, keyboard-only,
+            workflows, all from one palette. Fuzzy-matched, keyboard-only,
             blink-and-you'll-miss-it fast.
           </p>
         </div>

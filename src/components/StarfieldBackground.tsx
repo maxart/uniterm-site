@@ -2,10 +2,13 @@ import { useEffect, useRef } from 'react';
 
 import { cn } from '@/lib/utils';
 
-const STAR_COUNT = 220;
+const BASE_STAR_COUNT = 160;
+const STARS_PER_MEGAPIXEL = 280;
 const Z_NEAR = 0.4;
 const Z_FAR = 3.0;
-const STAR_SPEED = 0.45;
+const Z_MID = (Z_NEAR + Z_FAR) / 2;
+const STAR_SPEED = 0.42;
+const SPAWN_SPREAD = Z_FAR * 1.6;
 
 interface Star {
   x: number;
@@ -15,8 +18,8 @@ interface Star {
 }
 
 function seed(star: Star) {
-  star.x = (Math.random() * 2 - 1) * Z_FAR;
-  star.y = (Math.random() * 2 - 1) * Z_FAR;
+  star.x = (Math.random() * 2 - 1) * SPAWN_SPREAD;
+  star.y = (Math.random() * 2 - 1) * SPAWN_SPREAD;
   star.z = Z_NEAR + Math.random() * (Z_FAR - Z_NEAR);
   star.phase = Math.random() * Math.PI * 2;
 }
@@ -31,19 +34,31 @@ export function StarfieldBackground({ className }: Props) {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', { alpha: true });
     if (!ctx) return;
-
-    const stars: Star[] = Array.from({ length: STAR_COUNT }, () => {
-      const s: Star = { x: 0, y: 0, z: 0, phase: 0 };
-      seed(s);
-      return s;
-    });
 
     let width = 0;
     let height = 0;
     let dpr = 1;
+    let stars: Star[] = [];
+
+    const populate = () => {
+      const megapixels =
+        (canvas.clientWidth * canvas.clientHeight) / 1_000_000;
+      const target = Math.round(
+        BASE_STAR_COUNT + STARS_PER_MEGAPIXEL * megapixels
+      );
+      if (stars.length === target) return;
+      if (stars.length < target) {
+        for (let i = stars.length; i < target; i++) {
+          const s: Star = { x: 0, y: 0, z: 0, phase: 0 };
+          seed(s);
+          stars.push(s);
+        }
+      } else {
+        stars.length = target;
+      }
+    };
 
     const resize = () => {
       dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -55,6 +70,7 @@ export function StarfieldBackground({ className }: Props) {
         canvas.width = width;
         canvas.height = height;
       }
+      populate();
     };
 
     const ro = new ResizeObserver(resize);
@@ -66,8 +82,7 @@ export function StarfieldBackground({ className }: Props) {
     ).matches;
 
     const draw = (timeSec: number) => {
-      ctx.fillStyle = '#000000';
-      ctx.fillRect(0, 0, width, height);
+      ctx.clearRect(0, 0, width, height);
 
       const cx = width / 2;
       const cy = height / 2;
@@ -77,17 +92,28 @@ export function StarfieldBackground({ className }: Props) {
         const inv = 1 / s.z;
         const px = cx + s.x * inv * scale;
         const py = cy + s.y * inv * scale;
-        if (px < -4 || px > width + 4 || py < -4 || py > height + 4) continue;
+        if (px < -6 || px > width + 6 || py < -6 || py > height + 6) continue;
 
-        const twinkle = 0.85 + 0.15 * Math.sin(timeSec * 2 + s.phase);
-        const bright = Math.min(1, 0.6 * inv * twinkle);
-        const radius = Math.min(2.2, 1.0 * inv * twinkle) * dpr;
+        const twinkle = 0.9 + 0.1 * Math.sin(timeSec * 2.2 + s.phase);
+        const depth = 1 - (s.z - Z_NEAR) / (Z_FAR - Z_NEAR);
+        const isBright = s.z < Z_MID;
 
-        ctx.globalAlpha = bright * 0.55;
+        const alpha = Math.min(1, (0.5 + 0.5 * depth) * twinkle);
+        const radius =
+          (0.55 + 1.35 * depth) * dpr * (isBright ? 1 : 0.85);
+
+        ctx.globalAlpha = alpha;
+        ctx.fillStyle = isBright ? '#ffffff' : '#c9d2e3';
         ctx.beginPath();
         ctx.arc(px, py, radius, 0, Math.PI * 2);
-        ctx.fillStyle = '#ffffff';
         ctx.fill();
+
+        if (depth > 0.72) {
+          ctx.globalAlpha = alpha * 0.22;
+          ctx.beginPath();
+          ctx.arc(px, py, radius * 2.4, 0, Math.PI * 2);
+          ctx.fill();
+        }
       }
       ctx.globalAlpha = 1;
     };
