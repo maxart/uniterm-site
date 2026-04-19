@@ -1,0 +1,87 @@
+# Uniterm — Your terminal, multiplied.
+
+> The terminal multiplexer for AI coding. Agents and AI workflows in project-scoped workspaces.
+
+Uniterm is a free, cross-platform GUI terminal multiplexer designed for developers running AI coding agents (Claude Code, OpenCode, Codex) alongside their dev server, git, and shell. It runs on macOS, Windows, and Linux from one codebase, stores no data in the cloud, and has no account, no telemetry, and no paid tier.
+
+- Homepage: https://uniterm.dev/
+- Source: https://github.com/maxart/uniterm
+- License: O'App License
+
+## Platforms and install
+
+- **macOS** 12+ (Apple Silicon and Intel) — `curl -fsSL https://uniterm.dev/install.sh | sh`
+- **Windows** 10 1809+ (ConPTY required) — `iwr https://uniterm.dev/install.ps1 | iex`
+- **Linux** Ubuntu 22.04+, WebKitGTK 4.1 — `curl -fsSL https://uniterm.dev/install.sh | sh`
+
+Prebuilt `.dmg`, `.msi`, and `.AppImage` binaries are planned; source builds work today with Node 22+ and Rust 1.80+.
+
+## Built with
+
+- Tauri v2 + Rust backend (PTY + workspace persistence)
+- xterm.js with WebGL renderer
+- OS-native webview (no bundled Chromium; the download is measured in megabytes, not hundreds of megabytes)
+
+## Features
+
+- **Project-centric sidebar** — Terminals are grouped by project folder in collapsible tab groups. One window, every codebase.
+- **Unlimited split panes** — Horizontal and vertical splits with draggable dividers, nested as deep as the workflow needs.
+- **Workspace persistence** — Tabs, splits, and focused panes restore on launch. Multi-hour agent sessions come back up intact.
+- **21 bundled themes** — Catppuccin, Tokyo Night, Gruvbox, Nord, Rose Pine, Kanagawa, Dracula, Solarized Dark, One Dark, and more. Full Ghostty `.conf` theme format compatibility — drop a file into `~/.config/ghostty/themes/` and it appears in the picker immediately.
+- **Shell- and WSL-aware** — Detects every installed shell, including WSL distributions on Windows. One-click launch.
+- **Configurable hotkeys** — Ten rebindable shortcuts with a capture-mode recorder so any chord is fair game.
+- **In-terminal search + IME** — Debounced search with match navigation plus full IME support for CJK and composition input.
+- **Command palette** — `Mod+K` opens a fuzzy-matched palette for tabs, panes, themes, and custom workflows.
+- **Native performance** — Tauri v2 + Rust + WebGL-rendered xterm.js. Tiny binary, zero runtime bloat.
+
+## Built for the AI-coding era
+
+- **Run agents alongside your editor.** Split a pane for Claude Code, one for your dev server, one for git. Everything visible at once, no context switching.
+- **A workspace per project.** Keep parallel agent sessions for different repos. The sidebar scopes tabs per project folder so nothing blurs together.
+- **Sessions survive restarts.** Workspace persistence restores tabs, splits, and focus; multi-hour agent pair-programming context comes back instantly.
+- **Command palette for everything.** `Mod+K` searches tabs, panes, themes, and workflows.
+
+## Default keyboard shortcuts
+
+Mod = `⌘` on macOS, `Ctrl` on Windows and Linux. All remappable.
+
+- `Mod+T` — New tab
+- `Mod+D` — Split right
+- `Mod+Shift+D` — Split down
+- `Mod+Alt+→` — Focus pane right
+- `Ctrl+Tab` — Last-used tab
+- `Mod+B` — Toggle sidebar
+- `Mod+F` — Find in terminal
+- `Mod+O` — Open project
+- `Mod+K` — Command palette
+- `Mod+,` — Settings
+
+## FAQ
+
+### How much does Uniterm cost?
+
+Nothing. Uniterm is free to download and use, with no paid tier, no usage limits, and no trial timer. The binary you download is the whole product.
+
+### Do I need to sign up or give you an email?
+
+No. There is no account, no email collection, and no license key. Download the binary and launch it. Uniterm makes no network calls back to us, runs no telemetry, and has no analytics. Your shell sessions, project paths, and config stay on your machine.
+
+### Does Uniterm replace tmux?
+
+No. Uniterm is a GUI terminal multiplexer with split panes, tabs, and a project sidebar. If you live inside tmux over SSH, keep tmux. Uniterm is for the local window you open first.
+
+### How is it different from Warp or iTerm2?
+
+Uniterm is project-centric. Tabs and splits are grouped per folder and restored on launch. It runs on macOS, Windows, and Linux from the same codebase, and there is no account, no cloud sync, and no AI subscription gated behind the binary.
+
+### Can I bring my own theme?
+
+Yes. Uniterm reads Ghostty's `.conf` theme format. Drop a file into `~/.config/ghostty/themes/` and it shows up in the theme picker immediately. All UI colors follow the active palette.
+
+### Is my config synced to a cloud?
+
+No. Config is a local file at platform-native paths (Application Support on macOS, `~/.config` on Linux, `%APPDATA%` on Windows). Version-control it yourself if you want portability.
+
+### Why Tauri instead of Electron?
+
+Smaller binaries, the OS-native webview instead of a bundled Chromium, and a Rust backend for PTY + workspace persistence. It is the reason the download is measured in megabytes, not hundreds of megabytes.

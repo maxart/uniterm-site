@@ -1,0 +1,24 @@
+# Uniterm
+
+> A cross-platform GUI terminal multiplexer built for the AI-coding era. Run Claude Code, OpenCode, Codex, and your dev server side-by-side in project-scoped workspaces that survive restarts.
+
+Uniterm is a free, account-less desktop app for macOS, Windows, and Linux. It bundles split panes, tabs, a project sidebar, a command palette, and 21 themes with Ghostty `.conf` compatibility. Built with Tauri v2 + Rust and xterm.js + WebGL. No telemetry, no cloud sync, no login.
+
+## Core
+
+- [Home](https://uniterm.dev/): overview, install command, and feature tour
+- [Full content (markdown)](https://uniterm.dev/llms-full.txt): every section of the site inlined
+
+## Install
+
+- macOS 12+ (Apple Silicon / Intel): `curl -fsSL https://uniterm.dev/install.sh | sh`
+- Windows 10 1809+ (ConPTY): `iwr https://uniterm.dev/install.ps1 | iex`
+- Linux (Ubuntu 22.04+ / WebKitGTK 4.1): `curl -fsSL https://uniterm.dev/install.sh | sh`
+
+## Resources
+
+- [Source](https://github.com/maxart/uniterm): GitHub repository
+- [Readme](https://github.com/maxart/uniterm#readme): project documentation
+- [License](https://github.com/maxart/uniterm/blob/main/LICENSE): O'App License
+- [Omarchy themes](https://learn.omacom.io/2/the-omarchy-manual/52/themes): theme gallery compatible with Uniterm
+- [Ghostty themes](https://terminalcolors.com/ghostty/): theme gallery compatible with Uniterm
