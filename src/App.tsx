@@ -15,9 +15,10 @@ import { WorkflowsSection } from './components/sections/WorkflowsSection';
 export function App() {
   return (
     <>
+      <a href="#main" className="skip-link">Skip to main content</a>
       <NavBar />
       <Hero />
-      <main>
+      <main id="main">
         <AgentsStrip />
         <ShowcaseSection />
         <StatsStrip />

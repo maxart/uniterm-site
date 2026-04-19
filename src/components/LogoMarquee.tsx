@@ -97,7 +97,7 @@ function LogoItem({
   if (item.href) {
     return (
       <li>
-        <a href={item.href} target="_blank" rel="noreferrer" aria-label={item.name}>
+        <a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={item.name}>
           {body}
         </a>
       </li>

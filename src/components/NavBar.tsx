@@ -1,6 +1,6 @@
 import { Github } from 'lucide-react';
 
-import appIconSrc from '@/assets/app-icon.png';
+const APP_ICON = '/app-icon.png';
 
 const LINKS: Array<{ href: string; label: string }> = [
   { href: '#features', label: 'Features' },
@@ -21,10 +21,11 @@ export function NavBar() {
           className="flex items-center gap-2 text-sm font-semibold text-[var(--color-fg)]"
         >
           <img
-            src={appIconSrc}
+            src={APP_ICON}
             alt=""
             width={24}
             height={24}
+            decoding="async"
             className="h-6 w-6 [filter:drop-shadow(0_0_4px_rgba(255,255,255,0.2))]"
           />
           Uniterm
@@ -44,7 +45,7 @@ export function NavBar() {
         <a
           href="https://github.com/maxart/uniterm"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label="View Uniterm on GitHub"
           className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-[var(--color-fg-muted)] transition-colors hover:border-white/20 hover:text-[var(--color-fg)]"
         >

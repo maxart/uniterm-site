@@ -1,9 +1,9 @@
 import { ArrowRight, Download, Github } from 'lucide-react';
 
-import appIconSrc from '@/assets/app-icon.png';
-
 import { CopyCommand } from './CopyCommand';
 import { HeroBackground } from './HeroBackground';
+
+const APP_ICON = '/app-icon.png';
 
 const INSTALL_COMMAND = 'curl -fsSL https://uniterm.dev/install.sh | sh';
 
@@ -22,11 +22,13 @@ export function Hero() {
             className="absolute inset-0 -z-10 rounded-[28%] bg-[radial-gradient(circle_at_50%_50%,rgba(125,211,252,0.18),transparent_65%)] blur-2xl"
           />
           <img
-            src={appIconSrc}
+            src={APP_ICON}
             alt=""
             width={144}
             height={144}
             draggable={false}
+            fetchPriority="high"
+            decoding="async"
             className="h-32 w-32 select-none sm:h-36 sm:w-36 [filter:drop-shadow(0_18px_32px_rgba(0,0,0,0.55))_drop-shadow(0_2px_6px_rgba(0,0,0,0.45))]"
           />
         </div>
@@ -72,7 +74,7 @@ export function Hero() {
           <a
             href="https://github.com/maxart/uniterm"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 font-medium text-[var(--color-fg)] transition-colors hover:border-white/30 hover:bg-white/5"
           >
             <Github className="h-4 w-4" aria-hidden />

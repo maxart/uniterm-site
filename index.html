@@ -2,34 +2,67 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <meta name="robots" content="index,follow" />
+    <meta name="generator" content="Vite" />
+
+    <title>Uniterm — Your terminal, multiplied.</title>
     <meta
       name="description"
-      content="Uniterm: your terminal, multiplied. The terminal multiplexer for AI coding. Agents and AI workflows in project-scoped workspaces."
+      content="Uniterm is a cross-platform terminal multiplexer built for AI coding. Run Claude Code, OpenCode, and Codex alongside your dev server in project-scoped workspaces."
     />
-    <meta property="og:title" content="Uniterm: Your terminal, multiplied." />
+
+    <link rel="canonical" href="https://uniterm.dev/" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link rel="preload" as="image" href="/app-icon.png" fetchpriority="high" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://uniterm.dev/" />
+    <meta property="og:site_name" content="Uniterm" />
+    <meta property="og:title" content="Uniterm — Your terminal, multiplied." />
     <meta
       property="og:description"
-      content="The terminal multiplexer for AI coding. Agents and AI workflows in project-scoped workspaces."
+      content="A cross-platform terminal multiplexer built for AI coding. Run Claude Code, OpenCode, and Codex alongside your dev server in project-scoped workspaces."
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/icon-512.png" />
+    <meta property="og:image" content="https://uniterm.dev/icon-512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Uniterm app icon" />
+    <meta property="og:locale" content="en_US" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Uniterm — Your terminal, multiplied." />
+    <meta
+      name="twitter:description"
+      content="A cross-platform terminal multiplexer built for AI coding. Run Claude Code, OpenCode, and Codex alongside your dev server."
     />
+    <meta name="twitter:image" content="https://uniterm.dev/icon-512.png" />
+    <meta name="twitter:image:alt" content="Uniterm app icon" />
 
-    <title>Uniterm: Your terminal, multiplied.</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Uniterm",
+        "url": "https://uniterm.dev/",
+        "description": "A cross-platform terminal multiplexer built for AI coding. Run Claude Code, OpenCode, and Codex alongside your dev server in project-scoped workspaces.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "macOS, Windows, Linux",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "image": "https://uniterm.dev/icon-512.png"
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

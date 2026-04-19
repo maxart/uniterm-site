@@ -45,7 +45,7 @@ export function ThemesSection() {
             <a
               href="https://learn.omacom.io/2/the-omarchy-manual/52/themes"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-[var(--color-fg)] transition-colors hover:border-white/30 hover:bg-white/5"
             >
               Omarchy theme gallery
@@ -57,7 +57,7 @@ export function ThemesSection() {
             <a
               href="https://terminalcolors.com/ghostty/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-[var(--color-fg)] transition-colors hover:border-white/30 hover:bg-white/5"
             >
               Ghostty theme gallery

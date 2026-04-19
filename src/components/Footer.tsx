@@ -51,7 +51,7 @@ export function Footer() {
           <a
             href="https://github.com/maxart/uniterm"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="mt-2 inline-flex items-center gap-1.5 text-xs text-[var(--color-fg-muted)] transition-colors hover:text-[var(--color-fg)]"
           >
             <Github className="h-3.5 w-3.5" aria-hidden />
@@ -70,7 +70,7 @@ export function Footer() {
                   <a
                     href={href}
                     {...(external
-                      ? { target: '_blank', rel: 'noreferrer' }
+                      ? { target: '_blank', rel: 'noopener noreferrer' }
                       : {})}
                     className="text-[var(--color-fg-muted)] transition-colors hover:text-[var(--color-fg)]"
                   >
@@ -90,7 +90,7 @@ export function Footer() {
             <a
               href="https://tauri.app/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="transition-colors hover:text-[var(--color-fg)]"
             >
               Tauri
@@ -99,7 +99,7 @@ export function Footer() {
             <a
               href="https://react.dev/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="transition-colors hover:text-[var(--color-fg)]"
             >
               React
