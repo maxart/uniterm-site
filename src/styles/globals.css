@@ -121,3 +121,33 @@ body {
     animation: none !important;
   }
 }
+
+@keyframes shiny-sweep {
+  0% {
+    background-position: 150% center;
+  }
+  55% {
+    background-position: -50% center;
+  }
+  100% {
+    background-position: -50% center;
+  }
+}
+
+.shiny-text {
+  background-image: linear-gradient(
+    110deg,
+    var(--shiny-base) 0%,
+    var(--shiny-base) 35%,
+    var(--shiny-shine) 50%,
+    var(--shiny-base) 65%,
+    var(--shiny-base) 100%
+  );
+  background-size: 200% auto;
+  background-position: 150% center;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shiny-sweep var(--shiny-duration, 4.5s) linear infinite;
+}

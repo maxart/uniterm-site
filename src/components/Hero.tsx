@@ -1,4 +1,5 @@
 import { ArrowRight, Download, Github } from 'lucide-react';
+import type { CSSProperties } from 'react';
 
 import { CopyCommand } from './CopyCommand';
 import { HeroBackground } from './HeroBackground';
@@ -49,10 +50,17 @@ export function Hero() {
             />
           </a>
 
-          <h1 className="text-[clamp(3rem,8vw,6rem)] leading-[1.02] font-semibold tracking-tight text-[var(--color-fg)]">
-            Your terminal,{' '}
-            <span className="bg-[linear-gradient(110deg,#e8e8ea_0%,#7dd3fc_45%,#e8e8ea_100%)] bg-clip-text text-transparent">
-              multiplied.
+          <h1 className="text-[clamp(2.5rem,7vw,5rem)] leading-[1.02] font-semibold tracking-tight">
+            <span
+              className="shiny-text"
+              style={
+                {
+                  '--shiny-base': '#b5b5b5',
+                  '--shiny-shine': '#ffffff',
+                } as CSSProperties
+              }
+            >
+              Uniterm
             </span>
           </h1>
           <p className="max-w-2xl text-[clamp(1rem,1.8vw,1.25rem)] leading-relaxed text-[var(--color-fg-muted)]">
@@ -61,29 +69,31 @@ export function Hero() {
           </p>
         </div>
 
-        <CopyCommand command={INSTALL_COMMAND} className="mt-2" />
+        <div className="flex flex-col items-center gap-3">
+          <CopyCommand command={INSTALL_COMMAND} />
 
-        <div className="mt-2 flex flex-wrap items-center justify-center gap-3 text-sm">
-          <a
-            href="#install"
-            className="inline-flex items-center gap-2 rounded-full bg-[var(--color-fg)] px-5 py-2.5 font-medium text-black transition-opacity hover:opacity-90"
-          >
-            <Download className="h-4 w-4" aria-hidden />
-            Download
-          </a>
-          <a
-            href="https://github.com/maxart/uniterm"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 font-medium text-[var(--color-fg)] transition-colors hover:border-white/30 hover:bg-white/5"
-          >
-            <Github className="h-4 w-4" aria-hidden />
-            View on GitHub
-            <ArrowRight
-              className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:translate-x-0.5"
-              aria-hidden
-            />
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
+            <a
+              href="#install"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-fg)] px-5 py-2.5 font-medium text-black transition-opacity hover:opacity-90"
+            >
+              <Download className="h-4 w-4" aria-hidden />
+              Download
+            </a>
+            <a
+              href="https://github.com/maxart/uniterm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 font-medium text-[var(--color-fg)] transition-colors hover:border-white/30 hover:bg-white/5"
+            >
+              <Github className="h-4 w-4" aria-hidden />
+              View on GitHub
+              <ArrowRight
+                className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:translate-x-0.5"
+                aria-hidden
+              />
+            </a>
+          </div>
         </div>
 
         <span className="font-mono text-xs tracking-wider text-[var(--color-fg-dim)] uppercase">
