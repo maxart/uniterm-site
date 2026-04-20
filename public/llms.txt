@@ -2,7 +2,7 @@
 
 > A cross-platform GUI terminal multiplexer built for the AI-coding era. Run Claude Code, OpenCode, Codex, and your dev server side-by-side in project-scoped workspaces that survive restarts.
 
-Uniterm is a free, account-less desktop app for macOS, Windows, and Linux. It bundles split panes, tabs, a project sidebar, a command palette, and 21 themes with Ghostty `.conf` compatibility. Built with Tauri v2 + Rust and xterm.js + WebGL. No telemetry, no cloud sync, no login.
+Uniterm is a free, account-less desktop app for macOS, Windows, and Linux. It bundles split panes, tabs, a project sidebar, a command palette, and curated theme packs for Omarchy, macOS, and Windows with full Ghostty `.conf` compatibility. Built with Tauri v2 + Rust and xterm.js + WebGL. No telemetry, no cloud sync, no login.
 
 ## Core
 

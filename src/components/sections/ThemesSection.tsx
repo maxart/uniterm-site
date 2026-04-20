@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react';
 
-import { ThemeSwatchStrip } from '../ThemeSwatchStrip';
-import { THEMES } from '@/lib/themes';
+import { OsThemeCarousel } from '../OsThemeCarousel';
+import { OS_ENTRIES } from '@/lib/osThemes';
 
 export function ThemesSection() {
   return (
@@ -10,36 +10,33 @@ export function ThemesSection() {
       className="border-t border-[var(--color-border)] bg-[var(--color-bg)]"
     >
       <div className="mx-auto max-w-6xl px-6 py-24 sm:py-32">
-        <div className="mb-14 max-w-2xl">
+        <div className="mb-10 max-w-2xl">
           <p className="mb-3 font-mono text-xs tracking-wider text-[var(--color-accent)] uppercase">
             Themes
           </p>
           <h2 className="mb-4 text-3xl font-semibold tracking-tight text-[var(--color-fg)] sm:text-4xl">
-            21 themes. Or bring your own.
+            Looks right at home on every OS.
           </h2>
           <p className="text-base text-[var(--color-fg-muted)]">
-            Ships with ports of the Omarchy and Ghostty theme libraries, plus
-            full compatibility with Ghostty's
+            Uniterm reads your system appearance and ships curated theme packs
+            for Omarchy, macOS, and Windows — plus full compatibility with
+            Ghostty&rsquo;s
             <span className="font-mono text-[var(--color-fg)]"> .conf </span>
-            format. Drop a file into
-            <span className="font-mono text-[var(--color-fg)]">
-              {' '}~/.config/ghostty/themes/{' '}
-            </span>
-            and it appears in the theme picker immediately.
+            format. Pick an OS and flip through the presets.
           </p>
         </div>
 
-        <ul className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-          {THEMES.map((theme) => (
-            <li key={theme.name}>
-              <ThemeSwatchStrip theme={theme} />
-            </li>
-          ))}
-        </ul>
+        <OsThemeCarousel entries={OS_ENTRIES} />
 
-        <div className="mt-12 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-[var(--color-fg-muted)]">
-            Showing 12 of 21 bundled themes.
+            Any Ghostty{' '}
+            <span className="font-mono text-[var(--color-fg)]">.conf</span>{' '}
+            theme works — drop one into{' '}
+            <span className="font-mono text-[var(--color-fg)]">
+              ~/.config/ghostty/themes/
+            </span>
+            .
           </p>
           <div className="flex flex-wrap gap-3">
             <a
@@ -50,7 +47,7 @@ export function ThemesSection() {
             >
               Omarchy theme gallery
               <ArrowUpRight
-                className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 aria-hidden
               />
             </a>
@@ -62,7 +59,7 @@ export function ThemesSection() {
             >
               Ghostty theme gallery
               <ArrowUpRight
-                className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                 aria-hidden
               />
             </a>

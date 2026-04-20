@@ -27,7 +27,7 @@ Prebuilt `.dmg`, `.msi`, and `.AppImage` binaries are planned; source builds wor
 - **Project-centric sidebar** — Terminals are grouped by project folder in collapsible tab groups. One window, every codebase.
 - **Unlimited split panes** — Horizontal and vertical splits with draggable dividers, nested as deep as the workflow needs.
 - **Workspace persistence** — Tabs, splits, and focused panes restore on launch. Multi-hour agent sessions come back up intact.
-- **21 bundled themes** — Catppuccin, Tokyo Night, Gruvbox, Nord, Rose Pine, Kanagawa, Dracula, Solarized Dark, One Dark, and more. Full Ghostty `.conf` theme format compatibility — drop a file into `~/.config/ghostty/themes/` and it appears in the picker immediately.
+- **Curated theme packs per OS** — Omarchy (Tokyo Night, Lumon, Ash), macOS (iTerm Default, Darker Than One Dark Pro), and Windows (Tango Dark, Campbell, Vintage). Full Ghostty `.conf` theme format compatibility — drop a file into `~/.config/ghostty/themes/` and it appears in the picker immediately.
 - **Shell- and WSL-aware** — Detects every installed shell, including WSL distributions on Windows. One-click launch.
 - **Configurable hotkeys** — Ten rebindable shortcuts with a capture-mode recorder so any chord is fair game.
 - **In-terminal search + IME** — Debounced search with match navigation plus full IME support for CJK and composition input.
