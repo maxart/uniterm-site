@@ -12,12 +12,11 @@ export function FeaturesGrid() {
             Features
           </p>
           <h2 className="mb-4 text-3xl font-semibold tracking-tight text-[var(--color-fg)] sm:text-4xl">
-            Everything you expect. Nothing in the way.
+            A multiplexer you can live in.
           </h2>
           <p className="text-base text-[var(--color-fg-muted)]">
-            A focused terminal multiplexer that stays out of your flow. No
-            configuration required to get started. Deep customization when you
-            want it.
+            Sharp defaults on first launch, deep customization the moment you
+            want it. No config files to learn before you can open a tab.
           </p>
         </div>
 

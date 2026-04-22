@@ -1,60 +1,86 @@
-# Uniterm — Your terminal, multiplied.
+# Uniterm · The local-first terminal multiplexer for AI coding agents.
 
 > The terminal multiplexer for AI coding. Agents and AI workflows in project-scoped workspaces.
 
-Uniterm is a free, cross-platform GUI terminal multiplexer designed for developers running AI coding agents (Claude Code, OpenCode, Codex) alongside their dev server, git, and shell. It runs on macOS, Windows, and Linux from one codebase, stores no data in the cloud, and has no account, no telemetry, and no paid tier.
+Uniterm is a free, cross-platform GUI terminal multiplexer built for developers who run AI coding agents (Claude Code, OpenCode, Codex, Gemini CLI, Aider, and more) alongside their dev server, git, and shell. It runs on macOS, Windows, and Linux from one Tauri v2 + Rust codebase, stores no data in the cloud, and has no account, no telemetry, and no paid tier.
 
 - Homepage: https://uniterm.dev/
 - Source: https://github.com/maxart/uniterm
-- License: O'App License
+- License: O'App License (permissive; no reshipping as a competing standalone product)
+
+## Positioning
+
+- **Local-first.** Keys, prompts, files, and shell output never leave your machine. No account, no cloud sync, no telemetry.
+- **Agent-agnostic.** Uniterm bundles runners for the agent CLIs you already use and speaks their notification protocols. It does not ship its own model, backend, or chat pane.
+- **Cross-platform parity.** macOS, Windows (including WSL), and Linux from the same codebase. Project sidebar, splits, persistence, theme ecosystem, and agent integrations all work the same everywhere.
 
 ## Platforms and install
 
-- **macOS** 12+ (Apple Silicon and Intel) — `curl -fsSL https://uniterm.dev/install.sh | sh`
-- **Windows** 10 1809+ (ConPTY required) — `iwr https://uniterm.dev/install.ps1 | iex`
-- **Linux** Ubuntu 22.04+, WebKitGTK 4.1 — `curl -fsSL https://uniterm.dev/install.sh | sh`
+- **macOS** 12+ (Apple Silicon and Intel, universal build): `curl -fsSL https://uniterm.dev/install.sh | sh`
+- **Windows** 10 1809+ (ConPTY required; Windows 11 22H2+ recommended for `PSEUDOCONSOLE_PASSTHROUGH_MODE` truecolor): `iwr https://uniterm.dev/install.ps1 | iex`
+- **Linux** Ubuntu 22.04+, WebKitGTK 4.1: `curl -fsSL https://uniterm.dev/install.sh | sh`
 
-Prebuilt `.dmg`, `.msi`, and `.AppImage` binaries are planned; source builds work today with Node 22+ and Rust 1.80+.
+Prebuilt `.dmg`, `.msi`, `.deb`, `.rpm`, and `.AppImage` binaries are planned. Source builds work today with Node 22+ and the Rust stable toolchain.
 
 ## Built with
 
-- Tauri v2 + Rust backend (PTY + workspace persistence)
-- xterm.js with WebGL renderer
+- Tauri v2 + Rust backend (PTY + workspace persistence + agent registry)
+- xterm.js 6 with the DOM renderer (no WebGL, no canvas), deliberately chosen for reliable multi-pane rendering
 - OS-native webview (no bundled Chromium; the download is measured in megabytes, not hundreds of megabytes)
+- Direct ConPTY FFI on Windows with `PSEUDOCONSOLE_PASSTHROUGH_MODE` for 24-bit truecolor
 
-## Features
+## Workspace features
 
-- **Project-centric sidebar** — Terminals are grouped by project folder in collapsible tab groups. One window, every codebase.
-- **Unlimited split panes** — Horizontal and vertical splits with draggable dividers, nested as deep as the workflow needs.
-- **Workspace persistence** — Tabs, splits, and focused panes restore on launch. Multi-hour agent sessions come back up intact.
-- **Curated theme packs per OS** — Omarchy (Tokyo Night, Lumon, Ash), macOS (iTerm Default, Darker Than One Dark Pro), and Windows (Tango Dark, Campbell, Vintage). Full Ghostty `.conf` theme format compatibility — drop a file into `~/.config/ghostty/themes/` and it appears in the picker immediately.
-- **Shell- and WSL-aware** — Detects every installed shell, including WSL distributions on Windows. One-click launch.
-- **Configurable hotkeys** — Ten rebindable shortcuts with a capture-mode recorder so any chord is fair game.
-- **In-terminal search + IME** — Debounced search with match navigation plus full IME support for CJK and composition input.
-- **Command palette** — `Mod+K` opens a fuzzy-matched palette for tabs, panes, themes, and custom workflows.
-- **Native performance** — Tauri v2 + Rust + WebGL-rendered xterm.js. Tiny binary, zero runtime bloat.
+- **Project-centric sidebar.** Terminals are grouped by project folder in collapsible tab groups. One window, every codebase.
+- **Unlimited split panes.** Horizontal and vertical splits with draggable dividers and geometric directional focus.
+- **Workspace persistence.** Tabs, splits, and focused panes restore on launch. Multi-hour agent sessions come back up intact.
+- **Layout templates.** Bundled `claude-shell`, `claude-opencode-pair`, `triad`, and more. Applied from the command palette.
+- **In-app browser pane.** Split a native webview alongside terminals (macOS + Windows; WSLg falls back to the system browser).
 
-## Built for the AI-coding era
+## AI agent features
 
-- **Run agents alongside your editor.** Split a pane for Claude Code, one for your dev server, one for git. Everything visible at once, no context switching.
-- **A workspace per project.** Keep parallel agent sessions for different repos. The sidebar scopes tabs per project folder so nothing blurs together.
-- **Sessions survive restarts.** Workspace persistence restores tabs, splits, and focus; multi-hour agent pair-programming context comes back instantly.
-- **Command palette for everything.** `Mod+K` searches tabs, panes, themes, and workflows.
+- **Eight bundled agent runners.** Claude Code, OpenCode, Codex, Gemini CLI, Aider, Kiro CLI, Hermes, OpenClaw. One-click "new tab" launcher per agent.
+- **Per-agent install detection.** Multi-strategy probes across native PATH, WSL, and every common version manager: nvm, fnm, volta, mise, asdf, pnpm, bun, deno. Diagnostic UI on the AI tab when probes miss.
+- **OSC 777 agent-notify protocol.** Pane headers show live status pills as agents emit events (idle, working, asking). Compatible with Warp's plugin format and Hermes/OpenClaw conventions.
+- **OSC 7 + OSC 133.** Live `cwd` reporting and semantic prompt zones from the shell.
+- **Workflow YAML.** Parameterized command templates runnable from the palette.
+- **Plugin install/uninstall flows.** Bundled for every shipped agent.
+
+## Appearance and integrations
+
+- **Hundreds of bundled themes.** The full iTerm2 Color Schemes and Omarchy collections ship in the box. Full Ghostty `.conf` compatibility: drop a file into `~/.config/ghostty/themes/` and it appears in the picker immediately.
+- **Dynamic theming.** Every UI surface derives its palette from the active terminal theme via CSS custom properties.
+- **CaskaydiaMono Nerd Font bundled.** Full glyph coverage including braille (for btop) and box drawing.
+- **Truecolor end-to-end.** 24-bit RGB on every OS, including under WSL via Windows ConPTY passthrough mode. Themes render identically across macOS, Windows, and Linux.
+
+## Quality of life
+
+- **Twelve rebindable hotkeys** with capture-mode recording so any chord is fair game.
+- **Command palette (Mod+K).** Searchable across tabs, panes, themes, and workflows.
+- **Shell selection.** Picks up every installed shell including WSL distributions on Windows.
+- **In-terminal search** with debounce and match navigation.
+- **Close confirmation.** Prompts before closing panes with running processes.
+- **IME support.** For CJK and other composition input methods.
+- **Native clipboard integration.** Includes OSC 52 over SSH.
+- **Settings UI.** Appearance, Behavior, Shells, Keymaps, AI, Config tabs.
 
 ## Default keyboard shortcuts
 
 Mod = `⌘` on macOS, `Ctrl` on Windows and Linux. All remappable.
 
-- `Mod+T` — New tab
-- `Mod+D` — Split right
-- `Mod+Shift+D` — Split down
-- `Mod+Alt+→` — Focus pane right
-- `Ctrl+Tab` — Last-used tab
-- `Mod+B` — Toggle sidebar
-- `Mod+F` — Find in terminal
-- `Mod+O` — Open project
-- `Mod+K` — Command palette
-- `Mod+,` — Settings
+- `Mod+T`: new tab
+- `Mod+W`: close pane
+- `Mod+D`: split right
+- `Mod+Shift+D`: split down
+- `Mod+B`: toggle sidebar
+- `Mod+]` / `Mod+[`: next / previous tab
+- `Ctrl+Tab`: last-used tab (across all projects)
+- `Mod+O`: open project
+- `Mod+F`: find in terminal
+- `Mod+,`: open settings
+- `Mod+K`: command palette
+- `Mod+1`…`Mod+9`: select tab by index
+- `Mod+Alt+←/→/↑/↓`: focus pane in direction
 
 ## FAQ
 
@@ -66,17 +92,29 @@ Nothing. Uniterm is free to download and use, with no paid tier, no usage limits
 
 No. There is no account, no email collection, and no license key. Download the binary and launch it. Uniterm makes no network calls back to us, runs no telemetry, and has no analytics. Your shell sessions, project paths, and config stay on your machine.
 
+### Which AI agents does Uniterm support out of the box?
+
+Eight first-class runners ship bundled: Claude Code, OpenCode, Codex, Gemini CLI, Aider, Kiro CLI, Hermes, and OpenClaw. Uniterm detects which ones are installed on your machine (native PATH, WSL, and every common version manager: nvm, fnm, volta, mise, asdf, pnpm, bun, deno) and gives each a one-click "new tab" launcher. Any other CLI agent still works in any pane; the shipping ones just get the white-glove treatment.
+
+### Does Uniterm have its own AI or language model?
+
+No. Uniterm runs whichever agent CLIs you already use, with your own API keys. The app never forwards prompts, commands, or files anywhere. Every byte goes directly from your terminal to the agent you launched. There is no Uniterm model, no Uniterm backend, and no Uniterm cloud.
+
 ### Does Uniterm replace tmux?
 
 No. Uniterm is a GUI terminal multiplexer with split panes, tabs, and a project sidebar. If you live inside tmux over SSH, keep tmux. Uniterm is for the local window you open first.
 
-### How is it different from Warp or iTerm2?
+### How is it different from Warp?
 
-Uniterm is project-centric. Tabs and splits are grouped per folder and restored on launch. It runs on macOS, Windows, and Linux from the same codebase, and there is no account, no cloud sync, and no AI subscription gated behind the binary.
+Uniterm is local-first and agent-agnostic. Warp ships one assistant behind an account and a cloud backend; Uniterm bundles eight agent runners, has no account or telemetry, and uses the OSC 777 notify protocol so any agent that emits events can light up a status pill in the pane header. Keys, prompts, and files stay on your machine.
+
+### How is it different from iTerm2?
+
+iTerm2 is a macOS-only terminal without agent integration. Uniterm runs the same codebase on macOS, Windows, and Linux, scopes tabs and splits per project folder, ships bundled agent runners, and reads Ghostty `.conf` themes so the whole ecosystem is portable.
 
 ### Can I bring my own theme?
 
-Yes. Uniterm reads Ghostty's `.conf` theme format. Drop a file into `~/.config/ghostty/themes/` and it shows up in the theme picker immediately. All UI colors follow the active palette.
+Yes. Uniterm reads Ghostty's `.conf` theme format and ships the full iTerm2 Color Schemes and Omarchy collections. Drop any `.conf` file into `~/.config/ghostty/themes/` and it appears in the picker immediately.
 
 ### Is my config synced to a cloud?
 

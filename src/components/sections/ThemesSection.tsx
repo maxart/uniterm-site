@@ -18,11 +18,11 @@ export function ThemesSection() {
             Looks right at home on every OS.
           </h2>
           <p className="text-base text-[var(--color-fg-muted)]">
-            Uniterm reads your system appearance and ships curated theme packs
-            for Omarchy, macOS, and Windows — plus full compatibility with
-            Ghostty&rsquo;s
+            Hundreds of themes ship in the box, including the full iTerm2 Color
+            Schemes and Omarchy collections. Any Ghostty
             <span className="font-mono text-[var(--color-fg)]"> .conf </span>
-            format. Pick an OS and flip through the presets.
+            theme drops straight into the picker, and every UI surface follows
+            the active palette. Pick an OS for a curated slice.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export function ThemesSection() {
           <p className="text-sm text-[var(--color-fg-muted)]">
             Any Ghostty{' '}
             <span className="font-mono text-[var(--color-fg)]">.conf</span>{' '}
-            theme works — drop one into{' '}
+            theme works. Drop one into{' '}
             <span className="font-mono text-[var(--color-fg)]">
               ~/.config/ghostty/themes/
             </span>

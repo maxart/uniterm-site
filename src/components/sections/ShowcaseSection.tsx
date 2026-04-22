@@ -16,8 +16,9 @@ export function ShowcaseSection() {
           </h2>
           <p className="text-base text-[var(--color-fg-muted)]">
             Project-scoped tabs on the left, infinitely-splittable panes on the
-            right. Drop in an AI agent, your dev server, and a scratch shell.
-            All persistent across restarts.
+            right. Launch Claude Code in one split, your dev server in another,
+            git in a third. All persistent across restarts, all reporting live
+            status back to the pane header.
           </p>
         </div>
 

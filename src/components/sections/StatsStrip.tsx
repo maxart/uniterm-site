@@ -1,7 +1,7 @@
 const ITEMS = [
   "O'App Licensed",
   'Tauri v2 + Rust',
-  'xterm.js + WebGL',
+  'No account · No telemetry',
   'macOS · Windows · Linux',
 ];
 

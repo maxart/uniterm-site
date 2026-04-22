@@ -71,7 +71,7 @@ export function InstallSection() {
             </h2>
             <p className="mb-10 max-w-xl text-base text-[var(--color-fg-muted)]">
               Grab a prebuilt binary with a single shell command, or build from
-              source with Node 22+ and Rust 1.80+.
+              source with Node 22+ and the Rust stable toolchain.
             </p>
 
             <div

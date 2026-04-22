@@ -49,7 +49,7 @@ export function KeyboardSection() {
             Never touch the mouse.
           </h2>
           <p className="max-w-md text-base leading-relaxed text-[var(--color-fg-muted)]">
-            Ten default shortcuts you can remap in settings. Capture-mode
+            Twelve default shortcuts you can remap in settings. Capture-mode
             recording means you pick any chord, even weird ones your window
             manager doesn't touch.
             <br />

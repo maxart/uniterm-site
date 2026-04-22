@@ -45,8 +45,8 @@ export function Footer() {
         <div className="col-span-2 flex flex-col gap-3">
           <p className="text-sm font-semibold text-[var(--color-fg)]">Uniterm</p>
           <p className="max-w-xs text-sm text-[var(--color-fg-muted)]">
-            A cross-platform terminal multiplexer for the age of AI coding
-            agents.
+            The local-first terminal multiplexer for AI coding agents. Free,
+            cross-platform, no account.
           </p>
           <a
             href="https://github.com/maxart/uniterm"

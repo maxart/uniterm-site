@@ -44,7 +44,7 @@ export const OS_ENTRIES: OsEntry[] = [
   {
     id: 'windows',
     label: 'Windows',
-    tagline: 'PowerShell, WSL, cmd — one terminal.',
+    tagline: 'PowerShell, WSL, cmd. One terminal.',
     wallpaper: '/wallpapers/windows-bloom.jpg',
     wallpaperAlt: 'Windows 11 Bloom default wallpaper',
     defaultThemeId: 'tango-dark',

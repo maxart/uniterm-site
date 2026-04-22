@@ -1,29 +1,29 @@
-import { Bot, Command, GitBranch, Layers } from 'lucide-react';
+import { Activity, Bot, Layers, ScrollText } from 'lucide-react';
 
 const POINTS = [
   {
-    icon: Layers,
-    title: 'Run agents alongside your editor',
-    description:
-      'Split a pane for Claude Code, one for your dev server, one for git. Everything visible at once, no context switching.',
-  },
-  {
-    icon: GitBranch,
-    title: 'A workspace per project',
-    description:
-      'Keep parallel agent sessions for different repos. The sidebar scopes tabs per project folder so nothing blurs together.',
-  },
-  {
     icon: Bot,
-    title: 'Sessions survive restarts',
+    title: 'Eight bundled agent runners',
     description:
-      'Workspace persistence restores tabs, splits, and focus. Your multi-hour agent pair-programming context comes back up instantly.',
+      'Claude Code, OpenCode, Codex, Gemini CLI, Aider, Kiro CLI, Hermes, and OpenClaw. Uniterm detects which are installed across native PATH, WSL, and every common version manager (nvm, fnm, volta, mise, asdf, pnpm, bun, deno) and gives each a one-click new-tab launcher.',
   },
   {
-    icon: Command,
-    title: 'Command palette for everything',
+    icon: Activity,
+    title: 'Live agent status, no polling',
     description:
-      'Mod+K opens a searchable palette for tabs, panes, themes, and workflows. Never hunt for a menu again.',
+      'Pane headers light up as agents emit events via the OSC 777 notify protocol. See at a glance which session is idle, working, or waiting on input, without tailing the output yourself.',
+  },
+  {
+    icon: Layers,
+    title: 'Layout templates for common setups',
+    description:
+      'Open a pre-wired claude-shell, claude-opencode-pair, or triad layout from the command palette. Split panes and agents spin up in the right places on the first try.',
+  },
+  {
+    icon: ScrollText,
+    title: 'Workflow YAML for repeat tasks',
+    description:
+      'Parameterized command templates live next to your config. Fire a scripted workflow straight from the palette. No copy-pasting from a cheat sheet.',
   },
 ];
 
@@ -39,13 +39,15 @@ export function AgenticSection() {
             Built for the AI-coding era
           </p>
           <h2 className="mb-5 text-3xl font-semibold tracking-tight text-[var(--color-fg)] sm:text-4xl">
-            Your agents deserve a real workspace.
+            A terminal built for running agents.
+            <br />
+            Not selling you one.
           </h2>
           <p className="mb-10 text-base leading-relaxed text-[var(--color-fg-muted)]">
-            Uniterm was designed for developers running Claude Code, OpenCode,
-            Codex, and their own in-terminal agents. Split panes, persistent
-            workspaces, and a project-scoped sidebar make parallel agent
-            sessions feel native.
+            Uniterm bundles first-class runners for the agents you already use
+            and speaks their notification protocol, so panes know when an agent
+            stops for input. Keys, prompts, and files stay on your machine. No
+            account, no cloud, no subscription gating your shell.
           </p>
 
           <ul className="flex flex-col gap-6">
