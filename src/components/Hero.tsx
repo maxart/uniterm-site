@@ -1,12 +1,9 @@
-import { ArrowRight, Download, Github } from 'lucide-react';
+import { Download, Github } from 'lucide-react';
 import type { CSSProperties } from 'react';
 
-import { CopyCommand } from './CopyCommand';
 import { HeroBackground } from './HeroBackground';
 
 const APP_ICON = '/app-icon.png';
-
-const INSTALL_COMMAND = 'curl -fsSL https://uniterm.dev/install.sh | sh';
 
 export function Hero() {
   return (
@@ -35,20 +32,13 @@ export function Hero() {
         </div>
 
         <div className="flex flex-col items-center gap-5">
-          <a
-            href="#agents"
-            className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 font-mono text-[11px] tracking-wider text-[var(--color-fg-muted)] uppercase backdrop-blur hover:border-white/20 hover:text-[var(--color-fg)]"
-          >
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 font-mono text-[11px] tracking-wider text-[var(--color-fg-muted)] uppercase backdrop-blur">
             <span
               aria-hidden
               className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shadow-[0_0_8px_var(--color-accent)]"
             />
             Built for the AI-coding era
-            <ArrowRight
-              className="h-3 w-3 opacity-70 transition-transform group-hover:translate-x-0.5"
-              aria-hidden
-            />
-          </a>
+          </span>
 
           <h1 className="text-[clamp(2.5rem,7vw,5rem)] leading-[1.02] font-semibold tracking-tight">
             <span
@@ -70,28 +60,25 @@ export function Hero() {
         </div>
 
         <div className="flex flex-col items-center gap-3">
-          <CopyCommand command={INSTALL_COMMAND} />
-
           <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
-            <a
-              href="#install"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--color-fg)] px-5 py-2.5 font-medium text-black transition-opacity hover:opacity-90"
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              title="Downloads open when the alpha ships"
+              className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2.5 font-medium text-[var(--color-fg-muted)] opacity-70"
             >
               <Download className="h-4 w-4" aria-hidden />
-              Download
-            </a>
+              Download · coming soon
+            </button>
             <a
               href="https://github.com/maxart/uniterm"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 font-medium text-[var(--color-fg)] transition-colors hover:border-white/30 hover:bg-white/5"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 font-medium text-[var(--color-fg)] transition-colors hover:border-white/30 hover:bg-white/5"
             >
               <Github className="h-4 w-4" aria-hidden />
-              View on GitHub
-              <ArrowRight
-                className="h-3.5 w-3.5 opacity-70 transition-transform group-hover:translate-x-0.5"
-                aria-hidden
-              />
+              Follow on GitHub
             </a>
           </div>
         </div>

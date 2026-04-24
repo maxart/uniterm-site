@@ -2,13 +2,6 @@ import { Github } from 'lucide-react';
 
 const APP_ICON = '/app-icon.png';
 
-const LINKS: Array<{ href: string; label: string }> = [
-  { href: '#features', label: 'Features' },
-  { href: '#agents', label: 'Agents' },
-  { href: '#themes', label: 'Themes' },
-  { href: '#install', label: 'Install' },
-];
-
 export function NavBar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4">
@@ -30,18 +23,9 @@ export function NavBar() {
           />
           Uniterm
         </a>
-        <ul className="hidden items-center gap-6 font-mono text-sm text-[var(--color-fg-muted)] sm:flex">
-          {LINKS.map(({ href, label }) => (
-            <li key={href}>
-              <a
-                href={href}
-                className="transition-colors hover:text-[var(--color-fg)]"
-              >
-                {label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <span className="hidden font-mono text-[11px] tracking-wider text-[var(--color-fg-muted)] uppercase sm:inline">
+          Alpha · coming soon
+        </span>
         <a
           href="https://github.com/maxart/uniterm"
           target="_blank"
