@@ -1,7 +1,8 @@
-import { Download, Github } from 'lucide-react';
+import { Download } from 'lucide-react';
 import type { CSSProperties } from 'react';
 
 import { HeroBackground } from './HeroBackground';
+import { SourcePrivateButton } from './SourcePrivateButton';
 
 const APP_ICON = '/app-icon.png';
 
@@ -71,15 +72,9 @@ export function Hero() {
               <Download className="h-4 w-4" aria-hidden />
               Download · coming soon
             </button>
-            <a
-              href="https://github.com/maxart/uniterm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 font-medium text-[var(--color-fg)] transition-colors hover:border-white/30 hover:bg-white/5"
-            >
-              <Github className="h-4 w-4" aria-hidden />
+            <SourcePrivateButton variant="pill">
               Follow on GitHub
-            </a>
+            </SourcePrivateButton>
           </div>
         </div>
 

@@ -1,4 +1,6 @@
-import { Github } from 'lucide-react';
+import { Link } from '@/lib/router';
+
+import { SourcePrivateButton } from './SourcePrivateButton';
 
 export function Footer() {
   return (
@@ -11,15 +13,17 @@ export function Footer() {
             cross-platform, no account.
           </p>
         </div>
-        <a
-          href="https://github.com/maxart/uniterm"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-xs text-[var(--color-fg-muted)] transition-colors hover:text-[var(--color-fg)]"
-        >
-          <Github className="h-3.5 w-3.5" aria-hidden />
-          github.com/maxart/uniterm
-        </a>
+        <div className="flex flex-col items-start gap-2 sm:items-end">
+          <Link
+            to="/docs"
+            className="text-xs font-medium text-[var(--color-fg-muted)] transition-colors hover:text-[var(--color-fg)]"
+          >
+            Documentation
+          </Link>
+          <SourcePrivateButton variant="text">
+            github.com/maxart/uniterm
+          </SourcePrivateButton>
+        </div>
       </div>
       <div className="border-t border-[var(--color-border)]">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-5 font-mono text-xs text-[var(--color-fg-dim)]">
