@@ -50,7 +50,7 @@ Prebuilt `.dmg`, `.msi`, `.deb`, `.rpm`, and `.AppImage` binaries are planned. S
 
 ## Appearance and integrations
 
-- **Hundreds of bundled themes.** 500+ ship in the box — the full iTerm2 Color Schemes and Omarchy collections plus official sources, including Catppuccin (Mocha/Macchiato/Frappé/Latte), Tokyo Night, Gruvbox, Nord, Rose Pine, Kanagawa, Dracula, Miasma, One Dark, Solarized, and many more. Full Ghostty `.conf` compatibility for extras: drop a file into `~/.config/ghostty/themes/` and it appears in the picker near-instantly — no reload, no restart.
+- **Hundreds of bundled themes.** 500+ ship in the box — the full iTerm2 Color Schemes and Omarchy collections plus official sources, including Catppuccin (Mocha/Macchiato/Frappé/Latte), Tokyo Night, Gruvbox, Nord, Rose Pine, Kanagawa, Dracula, Miasma, One Dark, Solarized, and many more. Full Ghostty `.conf` compatibility for extras: drop a file into `~/.config/ghostty/themes/` and it appears in the picker. Some may require an app restart to be picked up.
 - **Dynamic theming.** Every UI surface derives its palette from the active terminal theme via CSS custom properties.
 - **CaskaydiaMono Nerd Font bundled.** Full glyph coverage including braille (for btop) and box drawing.
 - **Truecolor end-to-end.** 24-bit RGB on every OS, including under WSL via Windows ConPTY passthrough mode. Themes render identically across macOS, Windows, and Linux.
@@ -116,7 +116,7 @@ iTerm2 is a macOS-only terminal without agent integration. Uniterm runs the same
 
 ### Can I bring my own theme?
 
-Yes. Uniterm reads Ghostty's `.conf` theme format and ships 500+ themes in the box — the full iTerm2 Color Schemes and Omarchy collections plus official sources (Catppuccin, Tokyo Night, Gruvbox, Nord, Rose Pine, Kanagawa, Dracula, One Dark, Solarized, and many more). Drop any extra `.conf` file into `~/.config/ghostty/themes/` and it appears in the picker near-instantly — no reload, no restart.
+Yes. Uniterm reads Ghostty's `.conf` theme format and ships 500+ themes in the box — the full iTerm2 Color Schemes and Omarchy collections plus official sources (Catppuccin, Tokyo Night, Gruvbox, Nord, Rose Pine, Kanagawa, Dracula, One Dark, Solarized, and many more). Drop any extra `.conf` file into `~/.config/ghostty/themes/` and it appears in the picker. Some may require an app restart to be picked up.
 
 ### Is my config synced to a cloud?
 

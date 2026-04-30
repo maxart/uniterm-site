@@ -210,10 +210,10 @@ split = { from = "right-top", direction = "down", size = 0.5 }`}
         warning so you can migrate at your leisure.
       </P>
 
-      <Callout variant="tip" title="Reload without restarting">
+      <Callout variant="tip" title="Reloading layouts">
         After editing a layout file, open <Strong>Settings → Config</Strong>{' '}
-        and click <Strong>Reload</Strong>. New tabs pick up the change
-        immediately.
+        and click <Strong>Reload</Strong> so new tabs pick up the change.
+        Some changes may require an app restart.
       </Callout>
     </>
   );

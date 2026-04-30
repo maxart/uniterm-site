@@ -34,7 +34,7 @@ export const FAQS: Faq[] = [
   },
   {
     q: 'Can I bring my own theme?',
-    a: "Yes. Uniterm reads Ghostty's .conf theme format and ships the full iTerm2 Color Schemes and Omarchy collections. Drop any .conf file into ~/.config/ghostty/themes/ and it appears in the picker immediately. All UI surfaces follow the active palette.",
+    a: "Yes. Uniterm reads Ghostty's .conf theme format and ships the full iTerm2 Color Schemes and Omarchy collections. Drop any .conf file into ~/.config/ghostty/themes/ and it appears in the picker — some may require an app restart to be picked up. All UI surfaces follow the active palette.",
   },
   {
     q: 'Is my config synced to a cloud?',

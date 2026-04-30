@@ -40,7 +40,7 @@ export const FEATURES: Feature[] = [
     icon: Palette,
     title: 'Hundreds of bundled themes',
     description:
-      'The full iTerm2 Color Schemes and Omarchy collections ship in the box. Drop any Ghostty .conf theme into ~/.config/ghostty/themes/ and it appears in the picker.',
+      'The full iTerm2 Color Schemes and Omarchy collections ship in the box. Drop any Ghostty .conf theme into ~/.config/ghostty/themes/ and it appears in the picker — some may require an app restart to be picked up.',
   },
   {
     icon: TerminalSquare,

@@ -282,10 +282,10 @@ Pick one approach. Write a concrete, step-by-step plan to
         Workflows and every future iteration inherits it.
       </P>
 
-      <Callout variant="tip" title="Reload without restarting">
+      <Callout variant="tip" title="Reloading workflows">
         After editing a workflow file, open{' '}
         <Strong>Settings → Config</Strong> and click{' '}
-        <Strong>Reload</Strong>.
+        <Strong>Reload</Strong>. Some changes may require an app restart.
       </Callout>
     </>
   );

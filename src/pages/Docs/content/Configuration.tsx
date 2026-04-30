@@ -91,11 +91,11 @@ palette = 7=#bac2de`}
         <LI><code>scrollback-limit</code> — lines retained per pane</LI>
       </UL>
 
-      <Callout variant="tip" title="Reload without restart">
+      <Callout variant="tip" title="Reloading config">
         After hand-editing <code>uniterm.conf</code>, open{' '}
         <Strong>Settings → Config</Strong> and click{' '}
-        <Strong>Reload</Strong>. All open panes pick up the new theme and
-        font instantly.
+        <Strong>Reload</Strong> to pick up the new theme and font in open
+        panes. Some changes may require an app restart.
       </Callout>
 
       <H2>Other config locations</H2>
@@ -115,11 +115,9 @@ palette = 7=#bac2de`}
       </UL>
       <P>
         On Windows, <code>~/.config/...</code> maps to{' '}
-        <code>%APPDATA%\...</code>. The themes directory is watched live, so
-        new theme files appear in the picker without a reload. Layouts,
-        workflows, and agents are scanned on launch and on demand from the
-        Config tab's <Strong>Reload</Strong> button. User files override
-        bundled ones with the same <code>id</code>.
+        <code>%APPDATA%\...</code>. User files override bundled ones with
+        the same <code>id</code>. Some changes may require an app restart
+        to be picked up.
       </P>
 
       <H2>Shell integration</H2>
