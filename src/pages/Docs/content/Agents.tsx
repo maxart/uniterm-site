@@ -128,14 +128,24 @@ marker_protocol = "osc777"`}
       />
 
       <Callout variant="tip" title="Pair agents up">
-        For multi-agent workflows (e.g. one agent codes, another reviews), use
-        a <Link
-          to="/docs/templates"
+        For static multi-agent splits (e.g. one agent codes, another
+        reviews), use a{' '}
+        <Link
+          to="/docs/layouts"
           className="text-[var(--color-accent)] underline underline-offset-4"
-        >layout template</Link>{' '}— pre-built ones include{' '}
-        <code>claude-opencode-pair</code>,{' '}
-        <code>triad</code>, <code>ai-council</code>, and{' '}
-        <code>red-blue-purple</code>.
+        >
+          layout
+        </Link>
+        . For role-driven hand-offs (Plan → Exec → Verify, Brainstorm →
+        Plan, TDD loop, AI Council, AppSec review, Red/Blue/Purple), use a{' '}
+        <Link
+          to="/docs/workflows"
+          className="text-[var(--color-accent)] underline underline-offset-4"
+        >
+          workflow
+        </Link>
+        . Both are agent-agnostic — pick which agent runs each pane at
+        apply time.
       </Callout>
     </>
   );

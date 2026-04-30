@@ -32,13 +32,13 @@ export function Welcome() {
           installations and a live status pill on every pane.
         </LI>
         <LI>
-          <Strong>Track work with Goals</Strong>. Define an outcome, attach
-          agents and workflows, and watch validation evidence pile up as the
-          work happens.
+          <Strong>Track work as Tasks</Strong>. Define an outcome, attach a
+          workflow and success criteria, triage on a kanban, and watch
+          validation evidence pile up as agents work.
         </LI>
         <LI>
           <Strong>Steer agents from the Observatory</Strong>. A live
-          control panel for every agent, goal, and workflow — approve
+          control panel for every agent, task, and workflow — approve
           permissions, answer questions, and review verifier output without
           leaving the panel.
         </LI>
@@ -57,7 +57,7 @@ export function Welcome() {
       <P>
         We start with installation and a 5-minute quickstart, then walk through
         the core concepts (projects, panes, persistence). The AI Features
-        section covers agents, Goals, layout templates, and workflows. The
+        section covers agents, tasks, layouts, and workflows. The
         Customization section covers themes, keymaps, and the{' '}
         <code>uniterm.conf</code> file.
       </P>
@@ -77,13 +77,13 @@ export function Welcome() {
         >
           Quickstart
         </Link>{' '}
-        first. Already installed and want to set up your first AI workflow?
+        first. Already installed and want to set up your first AI task?
         Jump straight to{' '}
         <Link
-          to="/docs/goals"
+          to="/docs/tasks"
           className="text-[var(--color-accent)] underline underline-offset-4"
         >
-          Goals
+          Tasks
         </Link>
         .
       </Callout>
@@ -91,10 +91,11 @@ export function Welcome() {
       <H2>Status</H2>
       <P>
         Uniterm is in <Strong>private pre-alpha</Strong>. The core
-        multiplexer, agent runners, themes, and goals are stable. Some
-        surfaces (auto-update, in-pane chat sidebar, command-block rendering,
-        OSC 52 clipboard) are being polished. Builds go out directly to
-        testers — release notes ship alongside each build.
+        multiplexer, agent runners, themes, tasks, layouts, and workflows
+        are stable. Some surfaces (auto-update, in-pane chat sidebar,
+        command-block rendering, OSC 52 clipboard) are being polished.
+        Builds go out directly to testers — release notes ship alongside
+        each build.
       </P>
 
       <div className="mt-10">

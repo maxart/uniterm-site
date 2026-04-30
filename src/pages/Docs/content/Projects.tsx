@@ -78,12 +78,20 @@ export function Projects() {
         </LI>
         <LI>
           <Strong>Context menu</Strong>: right-click for actions like{' '}
-          <em>Close project</em>, <em>Reveal in Finder/Explorer</em>, and{' '}
-          <em>Set default template</em>.
+          <em>Close project</em>, <em>Reveal in Finder/Explorer</em>,{' '}
+          <em>Open in text editor...</em>, and{' '}
+          <em>Set default layout...</em>.
         </LI>
         <LI>
-          <Strong>Default template</Strong>: when set, opening a new tab in
-          this project applies the chosen layout template automatically.
+          <Strong>Default layout</Strong>: when set, opening a new tab in
+          this project applies the chosen{' '}
+          <Link
+            to="/docs/layouts"
+            className="text-[var(--color-accent)] underline underline-offset-4"
+          >
+            layout
+          </Link>{' '}
+          automatically — including the per-pane agent picks you saved.
           Hold <KeyChord keys={['Shift']} /> while pressing{' '}
           <KeyChord keys={['Mod', 'T']} /> to opt out for this tab.
         </LI>
@@ -102,8 +110,16 @@ export function Projects() {
       <UL>
         <LI>The list of open tabs and their split tree</LI>
         <LI>The currently focused pane</LI>
-        <LI>The default layout template (if you've set one)</LI>
-        <LI>The active goal, if any (see Goals)</LI>
+        <LI>The default layout (if you've set one), plus the saved per-pane agent picks for it</LI>
+        <LI>
+          Tasks scoped to this project — see{' '}
+          <Link
+            to="/docs/tasks"
+            className="text-[var(--color-accent)] underline underline-offset-4"
+          >
+            Tasks
+          </Link>
+        </LI>
       </UL>
       <P>
         Workspace state is persisted to disk every 500 ms (debounced).

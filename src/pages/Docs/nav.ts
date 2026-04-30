@@ -74,29 +74,31 @@ export const DOCS_SECTIONS: DocsSection[] = [
         description: 'Run Claude Code, Codex, Gemini, OpenCode, aider, and more.',
       },
       {
-        slug: 'goals',
-        path: '/docs/goals',
-        title: 'Goals',
-        description: 'Define an outcome, attach agents, track validation evidence.',
+        slug: 'tasks',
+        path: '/docs/tasks',
+        title: 'Tasks',
+        description:
+          'Define an outcome, attach agents, track validation evidence. Triage on a kanban.',
       },
       {
         slug: 'observatory',
         path: '/docs/observatory',
         title: 'Observatory',
         description:
-          'Real-time control panel for every agent, goal, and workflow.',
+          'Real-time control panel for every agent, task, and workflow.',
       },
       {
-        slug: 'templates',
-        path: '/docs/templates',
-        title: 'Layout Templates',
-        description: 'Pre-built multi-agent workspaces, one click.',
+        slug: 'layouts',
+        path: '/docs/layouts',
+        title: 'Layouts',
+        description: 'Pre-built multi-pane workspaces, agent-agnostic.',
       },
       {
         slug: 'workflows',
         path: '/docs/workflows',
         title: 'Workflows',
-        description: 'Reusable parameterized commands, run from the palette.',
+        description:
+          'Multi-agent orchestration with role hand-offs and verifier gates.',
       },
     ],
   },

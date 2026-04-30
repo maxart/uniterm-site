@@ -17,14 +17,18 @@ export function Configuration() {
 
       <H2>The Settings UI</H2>
       <P>
-        Open it with <code>Mod + ,</code>. Six tabs:
+        Open it with <code>Mod + ,</code>. Tabs:
       </P>
       <UL>
         <LI><Strong>Appearance</Strong> — theme, font, cursor, opacity, scrollback</LI>
         <LI><Strong>Behavior</Strong> — process-close confirmation, IME support</LI>
-        <LI><Strong>Shells</Strong> — pick your default shell from auto-detected list</LI>
-        <LI><Strong>Keymaps</Strong> — rebind shortcuts, see duplicate warnings</LI>
-        <LI><Strong>AI</Strong> — install / toggle / configure AI agents</LI>
+        <LI><Strong>Workspaces</Strong> — list workspaces and the projects each contains</LI>
+        <LI><Strong>AI agents</Strong> — install / toggle / configure agents</LI>
+        <LI><Strong>AI workflows</Strong> — manage saved per-role agent picks for each workflow</LI>
+        <LI><Strong>AI steering</Strong> — global agent-steering preferences</LI>
+        <LI><Strong>Layouts</Strong> — view bundled and user layouts</LI>
+        <LI><Strong>Shells</Strong> — pick your default shell from the auto-detected list; Restart WSL service on Windows</LI>
+        <LI><Strong>Keyboard Shortcuts</Strong> — rebind shortcuts, see duplicate warnings</LI>
         <LI><Strong>Config</Strong> — show config path, reload from disk</LI>
       </UL>
       <P>
@@ -97,10 +101,10 @@ palette = 7=#bac2de`}
       <H2>Other config locations</H2>
       <UL>
         <LI>
-          <code>~/.config/uniterm/templates/</code> — layout template TOML files
+          <code>~/.config/uniterm/layouts/</code> — multi-pane layout TOML files
         </LI>
         <LI>
-          <code>~/.config/uniterm/workflows/</code> — workflow TOML files
+          <code>~/.config/uniterm/workflows/</code> — multi-agent workflow TOML files
         </LI>
         <LI>
           <code>~/.config/uniterm/agents/</code> — custom agent definitions
@@ -113,7 +117,8 @@ palette = 7=#bac2de`}
         On Windows, <code>~/.config/...</code> maps to{' '}
         <code>%APPDATA%\...</code>. All four directories are scanned on
         launch and on demand from the Config tab's <Strong>Reload</Strong>{' '}
-        button.
+        button. User files override bundled ones with the same{' '}
+        <code>id</code>.
       </P>
 
       <H2>Shell integration</H2>

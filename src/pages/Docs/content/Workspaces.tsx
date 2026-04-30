@@ -83,19 +83,20 @@ export function Workspaces() {
         them in the same workspace.
       </Callout>
 
-      <H2>Workspaces, projects, and goals</H2>
+      <H2>Workspaces, projects, and tasks</H2>
       <P>
         Both <Link
           to="/docs/projects"
           className="text-[var(--color-accent)] underline underline-offset-4"
         >projects</Link>{' '}
         and <Link
-          to="/docs/goals"
+          to="/docs/tasks"
           className="text-[var(--color-accent)] underline underline-offset-4"
-        >goals</Link>{' '}
-        scope to a workspace. When you create a goal, the dialog asks for a
+        >tasks</Link>{' '}
+        scope to a workspace. When you create a task, the dialog asks for a
         workspace first, then a project (or <em>Workspace goal</em> if the
-        work spans multiple projects).
+        work spans multiple projects). The Manage Tasks kanban filters by the
+        active workspace.
       </P>
       <P>
         Future Uniterm releases will add per-workspace memory — a place agents
@@ -106,10 +107,10 @@ export function Workspaces() {
 
       <H3>Settings</H3>
       <P>
-        Open <Strong>Settings → Workspaces</Strong> to see every workspace,
-        the projects each contains, and per-workspace defaults (default
-        template, default workflow). Renaming a workspace here is the same as
-        renaming from the sidebar selector.
+        Open <Strong>Settings → Workspaces</Strong> to see every workspace
+        and the projects each contains. Per-project defaults (default
+        layout) live on the project's sidebar context menu. Renaming a
+        workspace here is the same as renaming from the sidebar selector.
       </P>
     </>
   );

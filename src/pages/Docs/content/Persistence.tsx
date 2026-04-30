@@ -32,7 +32,8 @@ export function Persistence() {
         <LI>Each project's open tabs, in their tab-strip order</LI>
         <LI>The split tree for each tab, including divider ratios</LI>
         <LI>The focused pane within each tab</LI>
-        <LI>Goals, success criteria, and validation evidence</LI>
+        <LI>Tasks: triage, sort order, success criteria, recurrence, validation evidence, and event log</LI>
+        <LI>Saved per-pane agent picks for each layout and workflow role</LI>
         <LI>App-wide settings (theme, keymaps, default shell, font)</LI>
       </UL>
 

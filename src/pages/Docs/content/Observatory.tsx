@@ -12,7 +12,7 @@ export function Observatory() {
       </p>
       <H1>Observatory</H1>
       <Lede>
-        Observatory is a real-time control panel for every agent, goal, and
+        Observatory is a real-time control panel for every agent, task, and
         workflow in your workspace. Instead of reading scrollback to figure
         out what an agent is doing, you see structured status, costs, file
         changes, and pending decisions at a glance — and you can approve,
@@ -67,7 +67,7 @@ export function Observatory() {
         </LI>
         <LI>
           <Strong>Token Telemetry</Strong> — workspace-wide totals plus
-          breakdown by goal and by agent, with prompt vs. completion split
+          breakdown by task and by agent, with prompt vs. completion split
         </LI>
         <LI>
           <Strong>Workflow Flow</Strong> — when a workflow is running, a
@@ -81,7 +81,7 @@ export function Observatory() {
           and <em>Copy URL</em>
         </LI>
         <LI>
-          <Strong>Goals</Strong> — collapsible lists of active goals and
+          <Strong>Tasks</Strong> — collapsible lists of active tasks and
           recent history, with quick drill-down into files, memory, and
           checkpoints
         </LI>
@@ -108,15 +108,15 @@ export function Observatory() {
           handled or reply.
         </LI>
         <LI>
-          <Strong>Agent waiting</Strong> — a goal run is paused waiting for
-          a "continue" signal. One-click resume.
+          <Strong>Agent waiting</Strong> — a task's agent run is paused
+          waiting for a "continue" signal. One-click resume.
         </LI>
         <LI>
           <Strong>Validation</Strong> — when a workflow's verifier
           finishes, a review gate appears with the verifier's findings.
-          Approve and close the goal, send back to the engineer or planner
-          (optionally with new instructions), cancel, or mark as failed.
-          An iteration counter caps at 3 to prevent loops.
+          Approve and complete the task, send back to the engineer or
+          planner (optionally with new instructions), cancel, or mark as
+          failed. An iteration counter caps at 3 to prevent loops.
         </LI>
       </UL>
       <P>
@@ -127,10 +127,10 @@ export function Observatory() {
 
       <H3>Timeline</H3>
       <P>
-        A filterable, chronological feed of every goal event in the
+        A filterable, chronological feed of every task event in the
         workspace: state changes, permissions, questions, answers,
         instructions, steering actions, review decisions, completions, and
-        failures. Filter by goal, agent, event type, or severity. Useful
+        failures. Filter by task, agent, event type, or severity. Useful
         for postmortems, audit trails, and "what happened while I was at
         lunch" reviews.
       </P>
@@ -140,21 +140,21 @@ export function Observatory() {
         The history of validation and review runs. Each entry shows the
         verifier's verdict, the iteration that produced it, and the
         decision you (or the workflow) made afterwards. Pair this with the
-        Goals page's{' '}
+        Tasks page's{' '}
         <Link
-          to="/docs/goals"
+          to="/docs/tasks"
           className="text-[var(--color-accent)] underline underline-offset-4"
         >
           validation evidence
         </Link>{' '}
-        to see the full provenance of a completed goal.
+        to see the full provenance of a completed task.
       </P>
 
       <H3>Files</H3>
       <P>
         Workspace-level summary of every file an agent has touched: counts
         of unique paths, checkpoints created, worktrees spun up. Drill into
-        any goal to see exactly which files were modified and which
+        any task to see exactly which files were modified and which
         checkpoints recorded the changes.
       </P>
 
@@ -179,7 +179,7 @@ export function Observatory() {
           <code>.uniterm/workflow/</code> during runs.
         </LI>
         <LI>
-          <Strong>Project learnings</Strong> — per-goal promotion controls
+          <Strong>Project learnings</Strong> — per-task promotion controls
           for promoting outcomes, patterns, and context into
           project-scoped memory.
         </LI>
@@ -189,12 +189,12 @@ export function Observatory() {
       <P>
         The export button in the panel header writes the current
         workspace's event log to JSON (schema{' '}
-        <code>uniterm.goal-event-log.v1</code>) — useful for analyses,
+        <code>uniterm.task-event-log.v1</code>) — useful for analyses,
         billing reconciliation, or feeding back into agent context.
       </P>
       <P>
         Beyond the Waiting tab, you can also send free-form{' '}
-        <em>instructions</em> into a running goal from the Overview — type
+        <em>instructions</em> into a running task from the Overview — type
         a directive and the active agent receives it as a steering message
         without losing its current context.
       </P>
@@ -202,7 +202,7 @@ export function Observatory() {
       <Callout variant="note" title="One panel, one workspace">
         Observatory always reflects the active workspace. Switch workspaces
         in the sidebar selector and the panel updates instantly — different
-        agents, different goals, different timeline. Cross-workspace views
+        agents, different tasks, different timeline. Cross-workspace views
         are not on the roadmap; the workspace boundary is the unit of
         attention by design.
       </Callout>

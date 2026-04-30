@@ -3,16 +3,16 @@ import { useRouter } from '@/lib/useRouter';
 import { DocsLayout } from './DocsLayout';
 import { Agents } from './content/Agents';
 import { Configuration } from './content/Configuration';
-import { Goals } from './content/Goals';
 import { Installation } from './content/Installation';
 import { Keyboard } from './content/Keyboard';
+import { Layouts } from './content/Layouts';
 import { NotFound } from './content/NotFound';
 import { Observatory } from './content/Observatory';
 import { Panes } from './content/Panes';
 import { Persistence } from './content/Persistence';
 import { Projects } from './content/Projects';
 import { Quickstart } from './content/Quickstart';
-import { Templates } from './content/Templates';
+import { Tasks } from './content/Tasks';
 import { Themes } from './content/Themes';
 import { Welcome } from './content/Welcome';
 import { Workflows } from './content/Workflows';
@@ -42,12 +42,14 @@ function renderPage(path: string) {
       return <Persistence />;
     case '/docs/agents':
       return <Agents />;
+    case '/docs/tasks':
     case '/docs/goals':
-      return <Goals />;
+      return <Tasks />;
     case '/docs/observatory':
       return <Observatory />;
+    case '/docs/layouts':
     case '/docs/templates':
-      return <Templates />;
+      return <Layouts />;
     case '/docs/workflows':
       return <Workflows />;
     case '/docs/themes':

@@ -57,8 +57,8 @@ export function Quickstart() {
         </LI>
         <LI>
           Double-click the project name to rename it. Right-click for context
-          actions (close, set default template, move to another workspace,
-          reveal in Finder/Explorer).
+          actions (close, set default layout, move to another workspace,
+          reveal in Finder/Explorer, open in text editor).
         </LI>
       </OL>
 
@@ -114,51 +114,60 @@ export function Quickstart() {
         agent's official installer for you.
       </Callout>
 
-      <H2>5. Open a layout template</H2>
+      <H2>5. Open a layout</H2>
       <P>
-        Templates spawn pre-arranged multi-pane workspaces with agents
-        attached. Press <KeyChord keys={['Mod', 'K']} />, type{' '}
-        <code>new tab from template</code>, and pick one:
+        Layouts spawn pre-arranged multi-pane workspaces. Press{' '}
+        <KeyChord keys={['Mod', 'K']} />, type{' '}
+        <code>new tab from layout</code>, and pick one:
       </P>
       <UL>
         <LI>
-          <code>claude-shell</code> — Claude Code in one pane, a shell in the
-          other
+          <code>claude-shell</code> — agent in one pane, shell in the other
         </LI>
         <LI>
-          <code>claude-opencode-pair</code> — Claude on the left, OpenCode on
-          the right
+          <code>pair-review</code> — two agents side-by-side
         </LI>
         <LI>
-          <code>triad</code> — Claude, Codex, and Gemini side by side
-        </LI>
-        <LI>
-          <code>ai-council</code> — Advocate / Skeptic / Synthesizer roles
+          <code>triad</code> — three agents in a 50/25/25 split
         </LI>
       </UL>
       <P>
-        See <Link
-          to="/docs/templates"
-          className="text-[var(--color-accent)] underline underline-offset-4"
-        >Layout Templates</Link>{' '}
-        for the full list and how to define your own.
-      </P>
-
-      <H2>6. Define a Goal</H2>
-      <P>
-        A Goal is the unit of agent work in Uniterm. You name an outcome,
-        attach success criteria, optionally pick a workflow template — and
-        every agent run, validation check, and touched file is recorded
-        against it.
-      </P>
-      <P>
-        Press <KeyChord keys={['Mod', 'K']} />, type <code>new goal</code>,
-        and press Enter. We'll walk through the dialog field-by-field on the{' '}
+        Layouts are agent-agnostic — pick which agent runs in each pane at
+        apply time and Uniterm remembers your picks. See{' '}
         <Link
-          to="/docs/goals"
+          to="/docs/layouts"
           className="text-[var(--color-accent)] underline underline-offset-4"
         >
-          Goals page
+          Layouts
+        </Link>{' '}
+        for the full list and the schema for your own.
+      </P>
+
+      <H2>6. Run a workflow</H2>
+      <P>
+        Workflows coordinate multiple agents around an objective:
+        Plan / Exec / Verify, brainstorm-to-plan, TDD loop, AI council,
+        appsec review, and more. Each pane has a role; the runner drives
+        the hand-off.
+      </P>
+      <P>
+        Press <KeyChord keys={['Mod', 'Shift', 'G']} /> to open the New
+        Task dialog, give it a goal, pick a workflow, and confirm the
+        agent for each role. The task surfaces on the kanban
+        (<KeyChord keys={['Mod', 'Shift', 'T']} />) and accumulates
+        evidence as agents work. See{' '}
+        <Link
+          to="/docs/tasks"
+          className="text-[var(--color-accent)] underline underline-offset-4"
+        >
+          Tasks
+        </Link>{' '}
+        and{' '}
+        <Link
+          to="/docs/workflows"
+          className="text-[var(--color-accent)] underline underline-offset-4"
+        >
+          Workflows
         </Link>
         .
       </P>
