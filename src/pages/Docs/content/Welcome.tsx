@@ -13,10 +13,10 @@ export function Welcome() {
       </p>
       <H1>Welcome to Uniterm</H1>
       <Lede>
-        Uniterm is a local-first terminal multiplexer built for the AI-coding
-        era. Run unlimited split panes, orchestrate AI coding agents, and keep
-        every project in its own persistent workspace — all on your machine, no
-        account required.
+        Uniterm is a local-first terminal multiplexer built for agentic
+        engineering. Run unlimited split panes, orchestrate AI coding agents,
+        and keep every project in its own persistent workspace — all on your
+        machine, no account required.
       </Lede>
 
       <H2>What you can do with Uniterm</H2>

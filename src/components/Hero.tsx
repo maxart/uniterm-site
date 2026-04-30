@@ -38,7 +38,7 @@ export function Hero() {
               aria-hidden
               className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shadow-[0_0_8px_var(--color-accent)]"
             />
-            Built for the AI-coding era
+            Built for agentic engineering
           </span>
 
           <h1 className="text-[clamp(2.5rem,7vw,5rem)] leading-[1.02] font-semibold tracking-tight">
