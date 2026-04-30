@@ -1,4 +1,4 @@
-# Uniterm · The local-first terminal multiplexer for AI coding agents.
+# Uniterm · The local-first terminal multiplexer built for agentic engineering.
 
 > The terminal multiplexer for AI coding. Agents and AI workflows in project-scoped workspaces.
 
@@ -34,7 +34,6 @@ Prebuilt `.dmg`, `.msi`, `.deb`, `.rpm`, and `.AppImage` binaries are planned. S
 - **Project-centric sidebar.** Terminals are grouped by project folder in collapsible tab groups. One window, every codebase.
 - **Unlimited split panes.** Horizontal and vertical splits with draggable dividers and geometric directional focus.
 - **Workspace persistence.** Tabs, splits, and focused panes restore on launch. Multi-hour agent sessions come back up intact.
-- **Layout templates.** Bundled `claude-shell`, `claude-opencode-pair`, `triad`, and more. Applied from the command palette.
 - **In-app browser pane.** Split a native webview alongside terminals (macOS + Windows; WSLg falls back to the system browser).
 
 ## AI agent features
@@ -43,26 +42,29 @@ Prebuilt `.dmg`, `.msi`, `.deb`, `.rpm`, and `.AppImage` binaries are planned. S
 - **Per-agent install detection.** Multi-strategy probes across native PATH, WSL, and every common version manager: nvm, fnm, volta, mise, asdf, pnpm, bun, deno. Diagnostic UI on the AI tab when probes miss.
 - **OSC 777 agent-notify protocol.** Pane headers show live status pills as agents emit events (idle, working, asking). Compatible with Warp's plugin format and Hermes/OpenClaw conventions.
 - **OSC 7 + OSC 133.** Live `cwd` reporting and semantic prompt zones from the shell.
-- **Workflow YAML.** Parameterized command templates runnable from the palette.
+- **Tasks.** The unit of agent work. Name an outcome, optionally attach a workflow and success criteria, and every agent run, command, validation check, and touched file is recorded against the task. The Manage Tasks window is a kanban over all your tasks; tasks can also recur on an interval.
+- **Workflows.** Multi-agent orchestration with role hand-offs — Planner, Engineer, Reviewer, Advocate, Skeptic. The runner waits for one role to go idle before activating the next. Agent-agnostic: pick which agent fills each role and Uniterm remembers your picks.
+- **Layouts.** Pre-arranged multi-pane setups (agents, shells, or both) spawned in one click. Agent-agnostic: each pane suggests an agent and you pick at apply time. Picks are remembered. Layouts only arrange panes; they do not coordinate hand-offs.
+- **Observatory.** Real-time control panel for every agent, task, and workflow in the workspace. Structured status, costs, file changes, and pending decisions at a glance — approve, answer, or steer without leaving the panel.
 - **Plugin install/uninstall flows.** Bundled for every shipped agent.
 
 ## Appearance and integrations
 
-- **Hundreds of bundled themes.** The full iTerm2 Color Schemes and Omarchy collections ship in the box. Full Ghostty `.conf` compatibility: drop a file into `~/.config/ghostty/themes/` and it appears in the picker immediately.
+- **Hundreds of bundled themes.** 500+ ship in the box — the full iTerm2 Color Schemes and Omarchy collections plus official sources, including Catppuccin (Mocha/Macchiato/Frappé/Latte), Tokyo Night, Gruvbox, Nord, Rose Pine, Kanagawa, Dracula, Miasma, One Dark, Solarized, and many more. Full Ghostty `.conf` compatibility for extras: drop a file into `~/.config/ghostty/themes/` and it appears after a config reload (or next launch).
 - **Dynamic theming.** Every UI surface derives its palette from the active terminal theme via CSS custom properties.
 - **CaskaydiaMono Nerd Font bundled.** Full glyph coverage including braille (for btop) and box drawing.
 - **Truecolor end-to-end.** 24-bit RGB on every OS, including under WSL via Windows ConPTY passthrough mode. Themes render identically across macOS, Windows, and Linux.
 
 ## Quality of life
 
-- **Twelve rebindable hotkeys** with capture-mode recording so any chord is fair game.
+- **Ten rebindable core actions** with capture-mode recording in Settings → Keyboard Shortcuts. Single-chord bindings only — tmux-style multi-chord sequences are not supported. Remaining bindings follow OS conventions and are fixed.
 - **Command palette (Mod+K).** Searchable across tabs, panes, themes, and workflows.
 - **Shell selection.** Picks up every installed shell including WSL distributions on Windows.
 - **In-terminal search** with debounce and match navigation.
 - **Close confirmation.** Prompts before closing panes with running processes.
 - **IME support.** For CJK and other composition input methods.
 - **Native clipboard integration.** Includes OSC 52 over SSH.
-- **Settings UI.** Appearance, Behavior, Shells, Keymaps, AI, Config tabs.
+- **Settings UI.** Appearance, Behavior, Workspaces, AI agents, AI workflows, AI steering, Layouts, Shells, Keyboard Shortcuts, Config. Every change is written to disk immediately — no Apply button.
 
 ## Default keyboard shortcuts
 
@@ -114,7 +116,7 @@ iTerm2 is a macOS-only terminal without agent integration. Uniterm runs the same
 
 ### Can I bring my own theme?
 
-Yes. Uniterm reads Ghostty's `.conf` theme format and ships the full iTerm2 Color Schemes and Omarchy collections. Drop any `.conf` file into `~/.config/ghostty/themes/` and it appears in the picker immediately.
+Yes. Uniterm reads Ghostty's `.conf` theme format and ships 500+ themes in the box — the full iTerm2 Color Schemes and Omarchy collections plus official sources (Catppuccin, Tokyo Night, Gruvbox, Nord, Rose Pine, Kanagawa, Dracula, One Dark, Solarized, and many more). Drop any extra `.conf` file into `~/.config/ghostty/themes/` and it appears after a config reload or next launch.
 
 ### Is my config synced to a cloud?
 

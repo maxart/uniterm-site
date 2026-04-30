@@ -1,8 +1,8 @@
 # Uniterm
 
-> The local-first cross-platform terminal multiplexer for AI coding agents. Bundles eight agent runners (Claude Code, OpenCode, Codex, Gemini CLI, Aider, Kiro CLI, Hermes, OpenClaw), speaks the OSC 777 notify protocol for live pane-header status, and runs everything on your machine. No account, no cloud, no telemetry.
+> The local-first cross-platform terminal multiplexer built for agentic engineering. Bundles eight agent runners (Claude Code, OpenCode, Codex, Gemini CLI, Aider, Kiro CLI, Hermes, OpenClaw), speaks the OSC 777 notify protocol for live pane-header status, and runs everything on your machine. No account, no cloud, no telemetry.
 
-Uniterm is a free desktop app for macOS, Windows, and Linux. It ships a project-scoped sidebar, unlimited split panes, workspace persistence, a command palette, layout templates, workflow YAML, and curated theme packs for Omarchy, macOS, and Windows, plus the full iTerm2 Color Schemes collection and full Ghostty `.conf` compatibility. Built with Tauri v2 + Rust and xterm.js 6 (DOM renderer). Direct ConPTY FFI on Windows for 24-bit truecolor. No login, no subscription.
+Uniterm is a free desktop app for macOS, Windows, and Linux. It ships a project-scoped sidebar, unlimited split panes, workspace persistence, a command palette, tasks (kanban with validation evidence), multi-agent workflows with role hand-offs, layouts, the Observatory control panel, hundreds of bundled themes (full iTerm2 Color Schemes and Omarchy collections — 500+ in the box), and full Ghostty `.conf` compatibility for any extra theme on disk. Built with Tauri v2 + Rust and xterm.js 6 (DOM renderer). Direct ConPTY FFI on Windows for 24-bit truecolor. No login, no subscription.
 
 ## Core
 
