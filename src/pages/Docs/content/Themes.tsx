@@ -10,9 +10,10 @@ export function Themes() {
       </p>
       <H1>Themes & Appearance</H1>
       <Lede>
-        Uniterm ships 21+ bundled themes and reads any Ghostty-compatible
-        theme on disk. Theme changes apply live — every pane updates without
-        a restart, including the surrounding UI palette.
+        Uniterm ships 500+ bundled themes — the full iTerm2 Color Schemes
+        and Omarchy collections plus official sources — and reads any
+        Ghostty-compatible theme on disk. Theme changes apply live: every
+        pane updates without a restart, including the surrounding UI palette.
       </Lede>
 
       <H2>Switching themes</H2>

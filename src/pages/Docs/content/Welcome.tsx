@@ -47,7 +47,7 @@ export function Welcome() {
           splits, and active panes are saved automatically.
         </LI>
         <LI>
-          <Strong>Customize freely</Strong>. 21+ bundled themes plus any
+          <Strong>Customize freely</Strong>. 500+ bundled themes plus any
           Ghostty-compatible theme on disk. Rebind shortcuts. Pick your
           shell — including any WSL distro on Windows.
         </LI>

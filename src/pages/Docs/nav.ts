@@ -109,7 +109,7 @@ export const DOCS_SECTIONS: DocsSection[] = [
         slug: 'themes',
         path: '/docs/themes',
         title: 'Themes & Appearance',
-        description: '21+ bundled themes, custom themes from disk.',
+        description: '500+ bundled themes, custom themes from disk.',
       },
       {
         slug: 'keyboard',
