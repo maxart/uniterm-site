@@ -115,10 +115,11 @@ palette = 7=#bac2de`}
       </UL>
       <P>
         On Windows, <code>~/.config/...</code> maps to{' '}
-        <code>%APPDATA%\...</code>. All four directories are scanned on
-        launch and on demand from the Config tab's <Strong>Reload</Strong>{' '}
-        button. User files override bundled ones with the same{' '}
-        <code>id</code>.
+        <code>%APPDATA%\...</code>. The themes directory is watched live, so
+        new theme files appear in the picker without a reload. Layouts,
+        workflows, and agents are scanned on launch and on demand from the
+        Config tab's <Strong>Reload</Strong> button. User files override
+        bundled ones with the same <code>id</code>.
       </P>
 
       <H2>Shell integration</H2>

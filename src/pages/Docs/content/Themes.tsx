@@ -51,9 +51,9 @@ export function Themes() {
         <LI><Strong>Windows</Strong>: <code>%APPDATA%\ghostty\themes\</code></LI>
       </UL>
       <P>
-        Uniterm rescans on launch and after clicking{' '}
-        <Strong>Settings → Config → Reload</Strong>. Custom themes appear in
-        the dropdown alongside the bundled ones.
+        Uniterm watches the directory live — new themes appear in the
+        dropdown alongside the bundled ones near-instantly. No reload, no
+        restart.
       </P>
 
       <H3>Example custom theme</H3>
